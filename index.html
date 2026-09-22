@@ -3,56 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosetta ❀ Softcore Poetry Sanctuary</title>
-    
-    <!-- Tailwind CSS -->
+    <title>Rosetta — The Visual Diary</title>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts (20+ Aesthetic Fonts) -->
+
+    <!-- Google Fonts: 20 Curated Aesthetic Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amatic+SC:wght@400;700&family=Caveat:wght@400;600&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Courgette&family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Marck+Script&family=Marcellus&family=Montez&family=Pacifico&family=Parisienne&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Amatic+SC:wght@700&family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@500;700&family=Great+Vibes&family=Herr+VonMuellerhoff&family=Italianno&family=Lora:ital,wght@0,400;1,400&family=Marck+Script&family=Parisienne&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600;700&family=Rochester&family=Sacramento&family=Satisfy&family=Tangerine:wght@700&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        babypink: '#F8C8DC',
-                        softpink: '#FFB6C1',
-                        roseblush: '#FFE4E1',
-                        deeprose: '#E8A0BF',
-                        cocoa: '#3D2314',
-                        cocoalight: '#5C3A21',
-                        cocoasemi: '#8B5A2B',
-                        cream: '#FFF9F5',
-                        softbeige: '#F7EBE1'
+                        babypink: '#fcedf2',
+                        softpink: '#f5c5d3',
+                        borderpink: '#ecc0ce',
+                        cocoa: '#4a2d27',
+                        deepcocoa: '#361f1a',
+                        cream: '#fffaf8',
+                        softcream: '#fffdfc'
                     },
                     fontFamily: {
-                        sans: ['Nunito', 'sans-serif'],
-                        dancing: ['Dancing Script', 'cursive'],
-                        pacifico: ['Pacifico', 'cursive'],
-                        greatvibes: ['Great Vibes', 'cursive'],
-                        caveat: ['Caveat', 'cursive'],
-                        sacramento: ['Sacramento', 'cursive'],
-                        playfair: ['Playfair Display', 'serif'],
-                        cinzel: ['Cinzel', 'serif'],
-                        patrick: ['Patrick Hand', 'cursive'],
-                        indie: ['Indie Flower', 'cursive'],
-                        kalam: ['Kalam', 'cursive'],
-                        shadows: ['Shadows Into Light', 'cursive'],
-                        amatic: ['Amatic SC', 'cursive'],
-                        cormorant: ['Cormorant Garamond', 'serif'],
-                        montez: ['Montez', 'cursive'],
-                        parisienne: ['Parisienne', 'cursive'],
-                        courgette: ['Courgette', 'cursive'],
-                        satisfy: ['Satisfy', 'cursive'],
-                        marcellus: ['Marcellus', 'serif'],
-                        marck: ['Marck Script', 'cursive'],
-                        alex: ['Alex Brush', 'cursive']
+                        serif: ['Playfair Display', 'serif'],
+                        body: ['Quicksand', 'sans-serif']
                     }
                 }
             }
@@ -60,486 +36,348 @@
     </script>
 
     <style>
+        /* STAGGERED ORGANIC POLKA DOT BACKGROUND - NON-GRID / NON-SERIES */
         body {
-           :root {
-  /* Enriched Softcore Palette */
-  --baby-pink-bg: #FFDEE9;      /* Slightly deeper, vibrant baby pink background */
-  --baby-pink-card: #FFF0F5;    /* Lavender blush for crisp card contrast */
-  --cocoa-brown: #5C3A21;       /* Richer, deeper chocolate cocoa brown for text & accents */
-  --cocoa-brown-light: #8C6242; /* Medium cocoa for secondary text & borders */
-  --accent-rose: #E79FBD;       /* Rose accent for buttons & highlighted dots */
-  --polka-dot-color: #F2B2C6;   /* Visible, cute polka dot contrast */
-}
+            background-color: #fcedf2;
+            background-image: 
+                radial-gradient(#4a2d27 2px, transparent 2px), 
+                radial-gradient(#4a2d27 1.7px, transparent 1.7px);
+            background-size: 36px 36px;
+            background-position: 0 0, 18px 18px; /* 50% Staggered row offset eliminates grid series alignment */
+            color: #4a2d27;
+            font-family: 'Quicksand', sans-serif;
+            min-height: 100vh;
         }
 
-        .polka-bg-light {
-            background-color: #FFF9F5;
-            background-image: radial-gradient(#FFB6C1 12%, transparent 12%);
-            background-size: 18px 18px;
+        /* Organic Staggered Polka Dots for inner cards */
+        .rosetta-card {
+            background: rgba(255, 253, 252, 0.94);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(74, 45, 39, 0.16);
+            box-shadow: 0 12px 32px -6px rgba(74, 45, 39, 0.08);
         }
 
-        .soft-shadow {
-            box-shadow: 0 10px 25px -5px rgba(61, 35, 20, 0.12), 0 8px 10px -6px rgba(61, 35, 20, 0.08);
+        .rosetta-polka-card {
+            background-color: rgba(255, 253, 252, 0.95);
+            background-image: 
+                radial-gradient(#4a2d27 1.5px, transparent 1.5px),
+                radial-gradient(#4a2d27 1.2px, transparent 1.2px);
+            background-size: 28px 28px;
+            background-position: 0 0, 14px 14px; /* Staggered offset */
+            border: 1px solid rgba(74, 45, 39, 0.18);
         }
 
-        /* Custom Scrollbar */
+        /* Custom Soft Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
-            height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #FFE4E1;
+            background: #fcedf2;
         }
         ::-webkit-scrollbar-thumb {
-            background: #E8A0BF;
-            border-radius: 999px;
+            background: #f5c5d3;
+            border: 2px solid #fcedf2;
+            border-radius: 9999px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #8B5A2B;
+            background: #4a2d27;
         }
 
-        /* Interactive Canvas Stickers */
-        .placed-sticker {
+        /* Interactive Sticker Overlay Controls */
+        .sticker-container {
             position: absolute;
             cursor: move;
             user-select: none;
             touch-action: none;
-            display: inline-block;
-            transform-origin: center center;
-            border: 2px transparent dashed;
-            border-radius: 12px;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
-        .placed-sticker.selected {
-            border-color: #3D2314;
-            box-shadow: 0 0 0 2px #FFB6C1;
-        }
-        .placed-sticker .sticker-toolbar {
-            display: none;
-        }
-        .placed-sticker.selected .sticker-toolbar,
-        .placed-sticker:hover .sticker-toolbar {
-            display: flex;
+        .sticker-container.selected {
+            outline: 2px dashed #4a2d27;
+            outline-offset: 4px;
         }
 
-        .editable-highlight {
-            outline: 2px dashed #E8A0BF;
-            outline-offset: 4px;
-            border-radius: 8px;
+        /* 20 Curated Google Font Classes */
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-dancing { font-family: 'Dancing Script', cursive; }
+        .font-caveat { font-family: 'Caveat', cursive; }
+        .font-sacramento { font-family: 'Sacramento', cursive; }
+        .font-lora { font-family: 'Lora', serif; }
+        .font-parisienne { font-family: 'Parisienne', cursive; }
+        .font-greatvibes { font-family: 'Great Vibes', cursive; }
+        .font-satisfy { font-family: 'Satisfy', cursive; }
+        .font-amatic { font-family: 'Amatic SC', cursive; font-size: 1.4em; }
+        .font-allura { font-family: 'Allura', cursive; }
+        .font-tangerine { font-family: 'Tangerine', cursive; font-size: 1.5em; }
+        .font-bodoni { font-family: 'Bodoni Moda', serif; }
+        .font-alexbrush { font-family: 'Alex Brush', cursive; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-rochester { font-family: 'Rochester', cursive; }
+        .font-marck { font-family: 'Marck Script', cursive; }
+        .font-muellerhoff { font-family: 'Herr Von Muellerhoff', cursive; font-size: 1.4em; }
+        .font-pinyon { font-family: 'Pinyon Script', cursive; }
+        .font-italianno { font-family: 'Italianno', cursive; font-size: 1.5em; }
+
+        /* Button Lift Effects */
+        .btn-hover-lift {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 45, 39, 0.15);
+        }
+
+        /* Contenteditable Placeholder */
+        [contenteditable=true]:empty:before {
+            content: attr(data-placeholder);
+            opacity: 0.45;
+            pointer-events: none;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="flex flex-col min-h-screen justify-between overflow-x-hidden selection:bg-softpink selection:text-cocoa">
 
-    <!-- HEADER & NAVIGATION -->
-    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b-4 border-babypink shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+    <!-- HEADER -->
+    <header class="w-full border-b border-cocoa/15 bg-cream/90 backdrop-blur-md sticky top-0 z-40 px-4 py-4 md:px-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             
-            <!-- Logo Section -->
-            <div class="flex items-center gap-3">
+            <!-- Site Logo & Name -->
+            <div class="flex items-center gap-4 text-center md:text-left">
                 <div class="relative group">
-                    <div id="logo-container" class="w-14 h-14 rounded-full bg-softpink flex items-center justify-center overflow-hidden border-2 border-cocoa shadow-inner cursor-pointer" onclick="openLogoModal()">
-                        <img id="app-logo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FFE4E1'/><path d='M50 25 C35 25 30 40 40 50 C25 45 20 60 30 70 C40 80 55 80 60 70 C75 70 80 50 65 45 C75 35 65 25 50 25 Z' fill='%23FFB6C1' stroke='%233D2314' stroke-width='2'/><circle cx='50' cy='48' r='12' fill='%23FFF9F5' stroke='%233D2314' stroke-width='1.5'/><path d='M42 58 Q 50 75 58 58' fill='none' stroke='%23E8A0BF' stroke-width='3'/></svg>" alt="Rosetta Logo" class="w-full h-full object-cover">
-                    </div>
-                    <button onclick="openLogoModal()" class="absolute -bottom-1 -right-1 bg-cocoa text-cream p-1 rounded-full text-xs shadow hover:scale-110 transition" title="Change Logo (Creator)">
-                        <i class="fas fa-camera"></i>
-                    </button>
+                    <img id="site-logo-img" src="https://placehold.co/120x120/fcedf2/4a2d27?text=Rosetta" alt="Rosetta Logo" class="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-cocoa/30 shadow-sm transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/120x120/fcedf2/4a2d27?text=Rosetta'">
                 </div>
                 <div>
-                    <h1 class="font-dancing text-3xl font-bold text-cocoa tracking-wide leading-none">Rosetta</h1>
-                    <p class="text-xs text-cocoalight italic font-medium">where feelings bloom into verses ❀</p>
+                    <h1 id="site-title" class="font-serif text-2xl md:text-3xl font-bold tracking-wide text-cocoa">Rosetta</h1>
+                    <p id="site-subtitle" class="text-xs md:text-sm text-cocoa/80 italic font-medium tracking-wider">The Visual Diary</p>
                 </div>
             </div>
 
-            <!-- Navigation Links + Creator Mode Indicator -->
-            <nav class="flex items-center gap-2 sm:gap-4 flex-wrap">
-                <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-4 py-2 rounded-full font-semibold text-sm transition flex items-center gap-2 bg-babypink text-cocoa shadow-sm border border-cocoalight/20">
-                    <i class="fas fa-home"></i> Preface
-                </button>
-                <button onclick="switchTab('publish')" id="nav-publish" class="nav-btn px-4 py-2 rounded-full font-semibold text-sm transition flex items-center gap-2 hover:bg-softpink/40 text-cocoa">
-                    <i class="fas fa-pen-nib"></i> Publish My Rose
-                </button>
-                <button onclick="switchTab('read')" id="nav-read" class="nav-btn px-4 py-2 rounded-full font-semibold text-sm transition flex items-center gap-2 hover:bg-softpink/40 text-cocoa">
-                    <i class="fas fa-book-open"></i> Read Roses
-                </button>
-                <button onclick="switchTab('about')" id="nav-about" class="nav-btn px-4 py-2 rounded-full font-semibold text-sm transition flex items-center gap-2 hover:bg-softpink/40 text-cocoa">
-                    <i class="fas fa-heart"></i> Know About Me
-                </button>
-
-                <!-- Creator Mode Button -->
-                <button onclick="promptAdminMode()" id="admin-mode-toggle" class="px-3 py-1.5 rounded-full font-bold text-xs transition flex items-center gap-1.5 bg-cocoa text-cream hover:bg-cocoalight border border-babypink shadow">
-                    <i id="admin-lock-icon" class="fas fa-lock text-softpink"></i>
-                    <span id="admin-badge-text">Creator Mode</span>
+            <!-- Navigation Bar -->
+            <nav class="flex items-center gap-2 md:gap-3 text-xs md:text-sm font-semibold text-cocoa">
+                <button onclick="switchTab('home')" class="nav-link px-3.5 py-2 rounded-full transition-all hover:bg-softpink/50 bg-softpink/60 font-bold" id="nav-home">Preface</button>
+                <button onclick="switchTab('publish')" class="nav-link px-3.5 py-2 rounded-full transition-all hover:bg-softpink/50" id="nav-publish">Publish my rose</button>
+                <button onclick="switchTab('read')" class="nav-link px-3.5 py-2 rounded-full transition-all hover:bg-softpink/50" id="nav-read">Read roses</button>
+                <button onclick="switchTab('about')" class="nav-link px-3.5 py-2 rounded-full transition-all hover:bg-softpink/50" id="nav-about">Know about me</button>
+                
+                <!-- Secret Founder Access Lock -->
+                <button onclick="openFounderModal()" class="ml-2 p-2 rounded-full text-cocoa/50 hover:text-cocoa hover:bg-softpink/40 transition-all" title="Founder Lock">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- MAIN CONTENT CONTAINER -->
-    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-6xl mx-auto w-full px-4 py-8 flex-grow">
 
-        <!-- TAB 1: PREFACE / HOME PAGE -->
-        <section id="tab-home" class="space-y-8 animate-fade-in">
-            <!-- Hero Card (Editable by Founder) -->
-            <div class="bg-cream border-4 border-softpink rounded-3xl p-6 md:p-12 soft-shadow polka-bg-light relative overflow-hidden text-center">
+        <!-- 1. PREFACE SECTION -->
+        <section id="tab-home" class="space-y-8">
+            <div class="rosetta-card p-8 md:p-14 rounded-3xl text-center max-w-3xl mx-auto border border-cocoa/20 shadow-md relative overflow-hidden">
                 
-                <!-- Admin Edit Banner on Home -->
-                <div id="preface-admin-bar" class="hidden mb-4 p-3 bg-roseblush/80 rounded-2xl border-2 border-deeprose text-xs font-bold text-cocoa flex flex-wrap items-center justify-between gap-2">
-                    <span><i class="fas fa-edit text-cocoalight"></i> Creator Editing Active: You can edit the Motive & Preface title below directly!</span>
-                    <div class="flex gap-2">
-                        <button onclick="savePrefaceEdits()" class="px-3 py-1 bg-cocoa text-cream rounded-xl hover:bg-cocoalight">
-                            <i class="fas fa-save text-softpink"></i> Save Preface Changes
-                        </button>
-                        <button onclick="resetPrefaceToDefault()" class="px-3 py-1 bg-cream text-cocoa rounded-xl border border-cocoa/20 hover:bg-softbeige">
-                            Reset Default
-                        </button>
-                    </div>
+                <!-- Gentle Emblem -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-softpink/50 border border-cocoa/20 flex items-center justify-center text-cocoa shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
                 </div>
 
-                <div class="max-w-2xl mx-auto space-y-6">
-                    <span id="preface-badge" class="inline-block px-4 py-1 rounded-full bg-softpink/30 text-cocoa font-bold text-xs uppercase tracking-widest border border-softpink">
-                        Welcome to Rosetta
-                    </span>
+                <span id="preface-tagline" class="text-xs tracking-widest uppercase text-cocoa/75 font-bold mb-3 block">A garden of thoughts, dreams, imagination and what not.</span>
+                <h2 class="font-serif text-3xl md:text-5xl text-cocoa font-bold mb-5 leading-tight">Welcome to Rosetta</h2>
+                
+                <p id="preface-description-text" class="text-base md:text-lg text-cocoa/90 leading-relaxed font-body max-w-2xl mx-auto mb-10">
+                    Rosetta was founded to express your passion for poetry and to make your talent recognizable . Here, every poem is treated like a delicate rose - so write, read and bloom.
+                </p>
 
-                    <h2 id="preface-heading" class="font-dancing text-4xl sm:text-6xl font-bold text-cocoa">
-                        Give Words To Your Heart & Let Your Talent Bloom
-                    </h2>
+                <div class="h-px w-32 bg-cocoa/20 mx-auto mb-10"></div>
 
-                    <p id="preface-motive-text" class="text-cocoalight text-base sm:text-lg leading-relaxed">
-                        Rosetta was created as a gentle, safe haven for passionate poets and creative souls. Here, every poem is a sacred <b>Rose</b>. Craft your verses with whimsical fonts, background music, pastel colors, and aesthetic stickers. Share your soul's music and be recognized by a kind community.
-                    </p>
-
-                    <!-- Quick Nav Buttons -->
-                    <div class="flex flex-wrap justify-center gap-4 pt-4">
-                        <button onclick="switchTab('publish')" class="bg-cocoa text-cream hover:bg-cocoalight font-bold px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition flex items-center gap-2">
-                            <i class="fas fa-feather-alt text-softpink"></i> Publish My Rose
-                        </button>
-                        <button onclick="switchTab('read')" class="bg-softpink text-cocoa hover:bg-babypink font-bold px-6 py-3 rounded-2xl shadow hover:scale-105 transition flex items-center gap-2 border border-cocoalight/20">
-                            <i class="fas fa-book-heart"></i> Read Roses
-                        </button>
-                        <button onclick="switchTab('about')" class="bg-cream text-cocoa hover:bg-softbeige font-bold px-6 py-3 rounded-2xl shadow border-2 border-softpink hover:scale-105 transition flex items-center gap-2">
-                            <i class="fas fa-user-sparkles text-cocoasemi"></i> Know About Me
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Motive & Highlights -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-cream/90 p-6 rounded-2xl border-2 border-babypink soft-shadow text-center space-y-3">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-roseblush flex items-center justify-center text-2xl text-cocoa">
-                        🎨
-                    </div>
-                    <h3 class="font-bold text-xl text-cocoa font-dancing text-2xl">Pastel Custom Canvas</h3>
-                    <p class="text-sm text-cocoalight">Pick from 20+ aesthetic Google fonts, custom color wheels, shades, and background media.</p>
-                </div>
-                <div class="bg-cream/90 p-6 rounded-2xl border-2 border-babypink soft-shadow text-center space-y-3">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-roseblush flex items-center justify-center text-2xl text-cocoa">
-                        🎵
-                    </div>
-                    <h3 class="font-bold text-xl text-cocoa font-dancing text-2xl">Music & Ambient Sounds</h3>
-                    <p class="text-sm text-cocoalight">Attach your favorite MP3 or select cozy ambient melodies to set the mood for your readers.</p>
-                </div>
-                <div class="bg-cream/90 p-6 rounded-2xl border-2 border-babypink soft-shadow text-center space-y-3">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-roseblush flex items-center justify-center text-2xl text-cocoa">
-                        ✨
-                    </div>
-                    <h3 class="font-bold text-xl text-cocoa font-dancing text-2xl">Interactive Canvas Stickers</h3>
-                    <p class="text-sm text-cocoalight">Move, resize, rotate, and layer stickers anywhere on your poem page with intuitive touch & mouse controls!</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto">
+                    <button onclick="switchTab('publish')" class="btn-hover-lift py-3 px-6 rounded-2xl bg-cocoa text-softcream font-semibold shadow-md hover:bg-deepcocoa transition-all text-sm">
+                        Publish my Rose
+                    </button>
+                    <button onclick="switchTab('read')" class="btn-hover-lift py-3 px-6 rounded-2xl bg-softpink text-cocoa font-semibold shadow-md hover:bg-borderpink transition-all text-sm">
+                        Read Roses
+                    </button>
+                    <button onclick="switchTab('about')" class="btn-hover-lift py-3 px-6 rounded-2xl bg-cream text-cocoa border border-cocoa/20 font-semibold hover:bg-softpink/30 transition-all text-sm">
+                        Know About Me
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 2: PUBLISH MY ROSE (Poetry Canvas Studio) -->
+        <!-- 2. PUBLISH MY ROSE SECTION -->
         <section id="tab-publish" class="hidden space-y-6">
-            <div class="bg-cream rounded-3xl p-6 border-4 border-softpink soft-shadow">
-                <div class="flex items-center justify-between border-b-2 border-babypink pb-4 mb-6 flex-wrap gap-2">
+            <div class="rosetta-card p-6 md:p-8 rounded-3xl">
+                
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-4 border-b border-cocoa/15">
                     <div>
-                        <h2 class="font-dancing text-3xl font-bold text-cocoa">Publish My Rose ❀ Studio</h2>
-                        <p class="text-xs text-cocoalight">Design your interactive poem canvas with aesthetic colors, fonts, music & moveable stickers.</p>
+                        <h2 class="font-serif text-2xl md:text-3xl font-bold text-cocoa">Compose Your Rose</h2>
+                        <p class="text-xs md:text-sm text-cocoa/75">Customize canvas shade, 20+ fonts, sticker cutouts, and background music.</p>
                     </div>
-                    <button onclick="publishPoem()" class="bg-cocoa hover:bg-cocoalight text-cream font-bold px-6 py-2.5 rounded-full shadow hover:scale-105 transition flex items-center gap-2">
-                        <i class="fas fa-paper-plane text-babypink"></i> Publish Rose
+                    <button onclick="publishRose()" class="btn-hover-lift bg-cocoa hover:bg-deepcocoa text-softcream font-semibold px-6 py-2.5 rounded-2xl shadow-md transition-all text-sm flex items-center gap-2">
+                        <span>Bloom & Publish</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
                     </button>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     
-                    <!-- Left Column: Controls & Styling Tools (5 cols) -->
-                    <div class="lg:col-span-5 space-y-5 bg-softbeige/60 p-4 rounded-2xl border-2 border-babypink max-h-[750px] overflow-y-auto">
+                    <!-- Left Column Controls -->
+                    <div class="lg:col-span-5 space-y-5 bg-cream/70 p-5 rounded-2xl border border-cocoa/15 max-h-[780px] overflow-y-auto">
                         
-                        <!-- Author & Title -->
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Poet Name & Title</label>
-                            <input type="text" id="editor-author" placeholder="Your Name or Pen Name..." class="w-full px-3 py-2 text-sm rounded-xl border-2 border-softpink bg-cream focus:outline-none focus:border-cocoa">
-                            <input type="text" id="editor-title" placeholder="Poem Title..." class="w-full px-3 py-2 text-sm font-bold rounded-xl border-2 border-softpink bg-cream focus:outline-none focus:border-cocoa">
+                        <!-- Inputs -->
+                        <div class="space-y-3">
+                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Poem Details</label>
+                            <input type="text" id="rose-title-input" placeholder="Title of your Rose..." class="w-full px-4 py-2.5 rounded-xl border border-cocoa/20 bg-white text-cocoa placeholder-cocoa/40 focus:outline-none focus:ring-2 focus:ring-softpink text-sm">
+                            <input type="text" id="rose-author-input" placeholder="Author Name..." class="w-full px-4 py-2.5 rounded-xl border border-cocoa/20 bg-white text-cocoa placeholder-cocoa/40 focus:outline-none focus:ring-2 focus:ring-softpink text-sm">
                         </div>
 
-                        <!-- Canvas Background Controls -->
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Background Color & Tint</label>
-                            <div class="grid grid-cols-6 gap-2" id="bg-color-picker">
-                                <!-- Colors injected by JS -->
-                            </div>
-                            <div class="flex items-center gap-2 mt-2">
-                                <span class="text-xs text-cocoalight">Custom BG Image:</span>
-                                <input type="file" id="bg-file-input" accept="image/*" class="hidden" onchange="handleBgImageUpload(event)">
-                                <button onclick="document.getElementById('bg-file-input').click()" class="px-3 py-1 bg-softpink text-cocoa rounded-lg text-xs font-bold border border-cocoa/20 hover:bg-babypink">
-                                    <i class="fas fa-image"></i> Upload Image
-                                </button>
-                                <button onclick="clearBgImage()" class="px-2 py-1 bg-red-100 text-red-700 rounded-lg text-xs font-bold hover:bg-red-200">
-                                    Clear BG Image
-                                </button>
+                        <!-- 20 Pastel Canvas Swatches -->
+                        <div>
+                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider mb-2">Pastel Shade Palette (20 Options)</label>
+                            <div class="grid grid-cols-5 gap-2" id="pastel-palette-container">
+                                <!-- Dynamic swatches -->
                             </div>
                         </div>
 
-                        <!-- Typography Tools -->
-                        <div class="space-y-3 pt-2 border-t border-babypink">
-                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Typography (20+ Aesthetic Fonts)</label>
-                            <select id="font-family-select" class="w-full p-2 text-sm rounded-xl border-2 border-softpink bg-cream font-medium focus:outline-none" onchange="updateCanvasTextStyle()">
-                                <option value="font-dancing">Dancing Script (Whimsical)</option>
-                                <option value="font-pacifico">Pacifico (Cute Pop)</option>
-                                <option value="font-greatvibes">Great Vibes (Classic Script)</option>
-                                <option value="font-caveat">Caveat (Soft Handwriting)</option>
-                                <option value="font-sacramento">Sacramento (Graceful Flow)</option>
-                                <option value="font-playfair">Playfair Display (Elegant Serif)</option>
-                                <option value="font-cinzel">Cinzel (Vintage Royalty)</option>
-                                <option value="font-patrick">Patrick Hand (Playful)</option>
-                                <option value="font-indie">Indie Flower (Cute Casual)</option>
-                                <option value="font-kalam">Kalam (Warm Written)</option>
-                                <option value="font-shadows">Shadows Into Light (Personal)</option>
-                                <option value="font-amatic">Amatic SC (Tall Aesthetic)</option>
-                                <option value="font-cormorant">Cormorant Garamond (Poetic)</option>
-                                <option value="font-montez">Montez (Soft Ribbon)</option>
-                                <option value="font-parisienne">Parisienne (Romantic)</option>
-                                <option value="font-courgette">Courgette (Soft Brush)</option>
-                                <option value="font-satisfy">Satisfy (Delicate)</option>
-                                <option value="font-marcellus">Marcellus (Classic)</option>
-                                <option value="font-marck">Marck Script (Gentle Flow)</option>
-                                <option value="font-alex">Alex Brush (Calligraphy)</option>
+                        <!-- 20 Google Fonts Selection -->
+                        <div class="space-y-3">
+                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Typography Style (20 Fonts)</label>
+                            <select id="rose-font-select" onchange="updateCanvasStyle()" class="w-full px-3 py-2.5 rounded-xl border border-cocoa/20 bg-white text-cocoa focus:outline-none focus:ring-2 focus:ring-softpink text-sm">
+                                <option value="Playfair Display" class="font-playfair">Playfair Display (Editorial Serif)</option>
+                                <option value="Cormorant Garamond" class="font-cormorant">Cormorant Garamond (Classic)</option>
+                                <option value="Dancing Script" class="font-dancing">Dancing Script (Whimsical Script)</option>
+                                <option value="Caveat" class="font-caveat">Caveat (Handwritten)</option>
+                                <option value="Sacramento" class="font-sacramento">Sacramento (Graceful)</option>
+                                <option value="Lora" class="font-lora">Lora (Literary)</option>
+                                <option value="Parisienne" class="font-parisienne">Parisienne (Romantic Script)</option>
+                                <option value="Great Vibes" class="font-greatvibes">Great Vibes (Calligraphy)</option>
+                                <option value="Satisfy" class="font-satisfy">Satisfy (Delicate)</option>
+                                <option value="Amatic SC" class="font-amatic">Amatic SC (Artistic Tall)</option>
+                                <option value="Allura" class="font-allura">Allura (Flowing Script)</option>
+                                <option value="Tangerine" class="font-tangerine">Tangerine (Graceful Calligraphy)</option>
+                                <option value="Bodoni Moda" class="font-bodoni">Bodoni Moda (Vogue Serif)</option>
+                                <option value="Alex Brush" class="font-alexbrush">Alex Brush (Brush Script)</option>
+                                <option value="Cinzel" class="font-cinzel">Cinzel (Cinematic)</option>
+                                <option value="Rochester" class="font-rochester">Rochester (Vintage)</option>
+                                <option value="Marck Script" class="font-marck">Marck Script (Poetic Cursive)</option>
+                                <option value="Herr Von Muellerhoff" class="font-muellerhoff">Herr Von Muellerhoff (Calligraphic)</option>
+                                <option value="Pinyon Script" class="font-pinyon">Pinyon Script (Victorian)</option>
+                                <option value="Italianno" class="font-italianno">Italianno (Soft Cursive)</option>
                             </select>
 
-                            <div class="flex items-center justify-between gap-2">
-                                <div class="flex items-center gap-1">
-                                    <span class="text-xs font-bold text-cocoalight">Font Color:</span>
-                                    <input type="color" id="font-color-wheel" value="#3D2314" class="w-8 h-8 rounded border border-cocoa cursor-pointer" onchange="updateCanvasTextStyle()">
+                            <div class="flex items-center gap-3">
+                                <div class="flex-1">
+                                    <label class="block text-[11px] font-semibold text-cocoa/80 mb-1">Color Wheel Picker</label>
+                                    <div class="flex items-center gap-2">
+                                        <input type="color" id="rose-color-picker" value="#4a2d27" onchange="updateCanvasStyle()" class="w-10 h-9 rounded-lg border border-cocoa/30 cursor-pointer p-0.5 bg-white">
+                                        <span id="color-hex-label" class="text-xs font-mono font-semibold text-cocoa">#4A2D27</span>
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-1">
-                                    <span class="text-xs font-bold text-cocoalight">Size:</span>
-                                    <input type="range" id="font-size-range" min="14" max="36" value="20" class="w-24 accent-cocoa" oninput="updateCanvasTextStyle()">
-                                </div>
-                                <div class="flex gap-1 border border-softpink rounded-lg bg-cream p-1">
-                                    <button onclick="setTextAlign('left')" class="p-1 text-xs text-cocoa hover:bg-babypink rounded"><i class="fas fa-align-left"></i></button>
-                                    <button onclick="setTextAlign('center')" class="p-1 text-xs text-cocoa hover:bg-babypink rounded"><i class="fas fa-align-center"></i></button>
-                                    <button onclick="setTextAlign('right')" class="p-1 text-xs text-cocoa hover:bg-babypink rounded"><i class="fas fa-align-right"></i></button>
+                                <div class="flex-1">
+                                    <label class="block text-[11px] font-semibold text-cocoa/80 mb-1">Font Size</label>
+                                    <input type="range" id="rose-fontsize-slider" min="14" max="38" value="18" oninput="updateCanvasStyle()" class="w-full accent-cocoa">
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Stickers Section -->
-                        <div class="space-y-2 pt-2 border-t border-babypink">
-                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Aesthetic Stickers & Media</label>
-                            <p class="text-[11px] text-cocoasemi italic">Click a sticker to add it, then drag, resize, rotate, or layer it on your canvas!</p>
-                            <div class="grid grid-cols-6 gap-2 bg-cream p-2 rounded-xl border border-softpink text-2xl text-center" id="sticker-gallery">
-                                <button onclick="addEmojiSticker('🌹')" class="hover:scale-125 transition p-1">🌹</button>
-                                <button onclick="addEmojiSticker('🌸')" class="hover:scale-125 transition p-1">🌸</button>
-                                <button onclick="addEmojiSticker('🎀')" class="hover:scale-125 transition p-1">🎀</button>
-                                <button onclick="addEmojiSticker('✨')" class="hover:scale-125 transition p-1">✨</button>
-                                <button onclick="addEmojiSticker('🦋')" class="hover:scale-125 transition p-1">🦋</button>
-                                <button onclick="addEmojiSticker('🧸')" class="hover:scale-125 transition p-1">🧸</button>
-                                <button onclick="addEmojiSticker('☕')" class="hover:scale-125 transition p-1">☕</button>
-                                <button onclick="addEmojiSticker('🕯️')" class="hover:scale-125 transition p-1">🕯️</button>
-                                <button onclick="addEmojiSticker('🌙')" class="hover:scale-125 transition p-1">🌙</button>
-                                <button onclick="addEmojiSticker('🕊️')" class="hover:scale-125 transition p-1">🕊️</button>
-                                <button onclick="addEmojiSticker('📜')" class="hover:scale-125 transition p-1">📜</button>
-                                <button onclick="addEmojiSticker('💖')" class="hover:scale-125 transition p-1">💖</button>
-                            </div>
-
-                            <!-- Custom Uploaded Sticker with simulated BG Removal -->
-                            <div class="bg-cream p-3 rounded-xl border border-softpink space-y-2">
-                                <span class="text-xs font-bold text-cocoalight block">Upload Custom Sticker Image</span>
-                                <div class="flex items-center gap-2">
-                                    <input type="file" id="sticker-file-input" accept="image/*" class="hidden" onchange="handleStickerUpload(event)">
-                                    <button onclick="document.getElementById('sticker-file-input').click()" class="px-3 py-1 bg-babypink text-cocoa text-xs font-bold rounded-lg hover:bg-softpink border border-cocoa/10">
-                                        <i class="fas fa-upload"></i> Upload Image
-                                    </button>
-                                    <label class="flex items-center gap-1 text-xs text-cocoalight cursor-pointer select-none">
-                                        <input type="checkbox" id="bg-remove-toggle" class="accent-cocoa">
-                                        <span>Soft BG Remove Effect</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Music Attachment -->
-                        <div class="space-y-2 pt-2 border-t border-babypink">
-                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Background Music</label>
-                            <select id="preset-music-select" class="w-full p-2 text-sm rounded-xl border-2 border-softpink bg-cream font-medium focus:outline-none" onchange="handlePresetMusicChange()">
-                                <option value="none">No Preset Music</option>
-                                <option value="synth-lofi">Cozy Lofi Melodic Chords (Synthesized)</option>
-                                <option value="synth-acoustic">Soft Harp & Piano Waves (Synthesized)</option>
-                            </select>
-                            <div class="flex items-center gap-2 mt-1">
-                                <span class="text-xs text-cocoalight">Or upload MP3:</span>
-                                <input type="file" id="audio-file-input" accept="audio/*" class="hidden" onchange="handleAudioUpload(event)">
-                                <button onclick="document.getElementById('audio-file-input').click()" class="px-3 py-1 bg-softpink text-cocoa text-xs font-bold rounded-lg hover:bg-babypink">
-                                    <i class="fas fa-music"></i> Select Audio File
-                                </button>
-                                <span id="uploaded-audio-name" class="text-xs italic text-cocoasemi truncate max-w-[120px]"></span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Right Column: Interactive Canvas Preview (7 cols) -->
-                    <div class="lg:col-span-7 flex flex-col items-center">
-                        <span class="text-xs font-bold text-cocoalight mb-2 uppercase tracking-wider"><i class="fas fa-hand-pointer"></i> Interactive Canvas (Click or Drag Stickers)</span>
-                        
-                        <!-- The Canvas Paper -->
-                        <div id="poem-canvas" class="relative w-full min-h-[550px] p-8 rounded-2xl shadow-xl transition-all border-4 border-softpink/40 flex flex-col justify-between overflow-hidden" style="background-color: #FFF9F5;" onclick="deselectAllStickers(event)">
+                        <!-- Sticker Engine Upload -->
+                        <div class="space-y-2 pt-2 border-t border-cocoa/15">
+                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Whimsical Sticker Cutout</label>
+                            <input type="file" id="sticker-upload-input" accept="image/*" onchange="handleStickerUpload(event)" class="hidden">
+                            <button onclick="document.getElementById('sticker-upload-input').click()" class="w-full py-2.5 px-4 rounded-xl border border-dashed border-cocoa/40 text-cocoa hover:bg-softpink/30 text-xs font-semibold transition-all flex items-center justify-center gap-2 bg-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-cocoa" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                Upload Photo for Sticker
+                            </button>
                             
-                            <!-- Custom Background Image Overlay -->
-                            <div id="canvas-bg-overlay" class="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none"></div>
-
-                            <!-- Title Header -->
-                            <div class="relative z-10 text-center mb-6 pointer-events-none">
-                                <h3 id="canvas-title-preview" class="font-dancing text-3xl font-bold text-cocoa drop-shadow-sm">Title of Your Rose</h3>
-                                <p id="canvas-author-preview" class="text-xs italic text-cocoalight font-semibold mt-1">by Poet Name</p>
+                            <div class="flex items-center gap-2 pt-1">
+                                <input type="checkbox" id="sticker-remove-bg" checked class="rounded border-cocoa/30 text-cocoa focus:ring-softpink">
+                                <label for="sticker-remove-bg" class="text-xs text-cocoa/90 font-medium">Auto White Background Removal</label>
                             </div>
+                        </div>
 
-                            <!-- Editable Text Area on Canvas -->
-                            <div class="relative z-10 flex-grow my-4">
-                                <textarea id="poem-text-input" placeholder="Write your delicate poem here... Let your soul speak..." class="w-full h-full min-h-[300px] bg-transparent resize-none focus:outline-none p-2 font-dancing text-xl text-cocoa" style="color: #3D2314;" oninput="updateCanvasText()"></textarea>
-                            </div>
-
-                            <!-- Canvas Footer with Mini Audio Indicator -->
-                            <div class="relative z-10 flex items-center justify-between border-t border-cocoa/10 pt-3 text-xs text-cocoalight font-medium pointer-events-none">
-                                <span>❀ Rosetta Poem</span>
-                                <div id="canvas-music-badge" class="hidden items-center gap-1.5 px-3 py-1 bg-cream/80 backdrop-blur rounded-full border border-softpink text-cocoa">
-                                    <i class="fas fa-music text-deeprose animate-pulse"></i> <span id="music-badge-text">Background Music Attached</span>
-                                </div>
-                            </div>
-
-                            <!-- Container for Placed Interactive Stickers -->
-                            <div id="stickers-container" class="absolute inset-0 pointer-events-auto"></div>
+                        <!-- Background Music Upload -->
+                        <div class="space-y-2 pt-2 border-t border-cocoa/15">
+                            <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Background Music Track</label>
+                            <input type="file" id="music-upload-input" accept="audio/*" onchange="handleMusicUpload(event)" class="hidden">
+                            <button onclick="document.getElementById('music-upload-input').click()" class="w-full py-2.5 px-4 rounded-xl border border-cocoa/20 bg-white text-cocoa hover:bg-softpink/30 text-xs font-semibold transition-all flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-cocoa" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                                </svg>
+                                <span id="music-filename-label">Attach MP3 / Audio Track</span>
+                            </button>
+                            <audio id="poem-audio-preview" controls class="w-full h-8 mt-2 hidden"></audio>
                         </div>
 
                     </div>
+
+                    <!-- Right Column Interactive Canvas -->
+                    <div class="lg:col-span-7 flex flex-col items-center justify-start">
+                        <span class="text-xs text-cocoa/70 mb-2 italic font-medium">Interactive Canvas (Drag stickers to move or corner handle to resize)</span>
+                        <div id="poem-canvas" class="w-full min-h-[520px] rounded-2xl p-8 relative overflow-hidden transition-colors duration-300 shadow-inner border border-cocoa/20 flex flex-col justify-between" style="background-color: #fcedf2;">
+                            
+                            <!-- Poem Text Editable Layer -->
+                            <div class="z-10 relative">
+                                <h3 id="canvas-title" class="text-2xl md:text-3xl font-serif font-bold mb-1 outline-none" contenteditable="true" data-placeholder="Rose Title..."></h3>
+                                <p id="canvas-author" class="text-xs md:text-sm italic mb-6 opacity-85 outline-none font-medium" contenteditable="true" data-placeholder="By Writer Name"></p>
+                                <div id="canvas-body" class="whitespace-pre-wrap leading-relaxed outline-none min-h-[260px]" contenteditable="true" data-placeholder="Write your delicate rose verses here..."></div>
+                            </div>
+
+                            <div class="z-10 mt-6 pt-4 border-t border-cocoa/15 flex justify-between items-center text-[11px] font-semibold text-cocoa/70">
+                                <span>Rosetta Visual Canvas</span>
+                                <span id="canvas-date"></span>
+                            </div>
+
+                            <!-- Interactive Sticker Layer -->
+                            <div id="canvas-stickers-layer" class="absolute inset-0 pointer-events-none z-20"></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- TAB 3: READ ROSES (Community Library) -->
+        <!-- 3. READ ROSES GALLERY SECTION -->
         <section id="tab-read" class="hidden space-y-6">
-            <div class="bg-cream rounded-3xl p-6 border-4 border-softpink soft-shadow">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b-2 border-babypink pb-4 mb-6">
-                    <div>
-                        <h2 class="font-dancing text-3xl font-bold text-cocoa">Read Roses ❀ Sanctuary Gallery</h2>
-                        <p class="text-xs text-cocoalight">Explore heartwarming poems published by poets around the world.</p>
-                    </div>
-
-                    <!-- Search Bar -->
-                    <div class="relative w-full md:w-72">
-                        <input type="text" id="search-input" onkeyup="filterRoses()" placeholder="Search title or poet..." class="w-full pl-9 pr-4 py-2 rounded-full border-2 border-softpink bg-cream text-sm text-cocoa focus:outline-none focus:border-cocoa">
-                        <i class="fas fa-search absolute left-3 top-3 text-cocoalight text-xs"></i>
-                    </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-cocoa">The Blooming Garden</h2>
+                    <p class="text-xs md:text-sm text-cocoa/75">Discover delicate poems composed by passionate creators.</p>
                 </div>
+            </div>
 
-                <!-- Roses Grid -->
-                <div id="roses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Dynamic Rose Cards loaded via JS -->
-                </div>
-
-                <div id="empty-roses-msg" class="hidden text-center py-12 space-y-3">
-                    <p class="text-3xl">🥀</p>
-                    <p class="text-cocoalight font-bold text-lg">No roses found in this garden yet.</p>
-                    <button onclick="switchTab('publish')" class="px-4 py-2 bg-cocoa text-cream rounded-full text-sm font-bold">Be the first to publish!</button>
-                </div>
+            <!-- Published Roses Gallery -->
+            <div id="roses-gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically Populated -->
             </div>
         </section>
 
-        <!-- TAB 4: KNOW ABOUT ME (Creator Platform & Editable Founder Bio) -->
-        <section id="tab-about" class="hidden space-y-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- 4. KNOW ABOUT ME SECTION -->
+        <section id="tab-about" class="hidden space-y-8">
+            <div class="rosetta-card p-6 md:p-10 rounded-3xl max-w-4xl mx-auto border border-cocoa/20">
                 
-                <!-- Creator Bio Card (Editable in Admin Mode) (4 cols) -->
-                <div class="lg:col-span-4 bg-cream p-6 rounded-3xl border-4 border-softpink soft-shadow text-center space-y-4 h-fit">
-                    
-                    <!-- Admin Edit Controls for Founder Bio -->
-                    <div id="about-admin-bar" class="hidden mb-2 p-2.5 bg-roseblush rounded-2xl border border-deeprose text-xs font-bold text-cocoa flex flex-col gap-2">
-                        <span class="text-[11px]"><i class="fas fa-pen text-cocoalight"></i> Admin Edit Mode: You can edit Founder info below directly!</span>
-                        <div class="flex gap-2 justify-center">
-                            <button onclick="saveFounderEdits()" class="px-3 py-1 bg-cocoa text-cream rounded-xl text-xs hover:bg-cocoalight">
-                                <i class="fas fa-save text-softpink"></i> Save Bio Edits
-                            </button>
-                            <button onclick="resetFounderToDefault()" class="px-2 py-1 bg-cream text-cocoa text-xs rounded-xl border border-cocoa/20">
-                                Reset Default
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="relative w-28 h-28 mx-auto group">
-                        <div class="w-28 h-28 rounded-full bg-softpink border-4 border-cocoa overflow-hidden shadow-md flex items-center justify-center">
-                            <img id="creator-avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23FFB6C1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='40'>🌸</text></svg>" class="w-full h-full object-cover" alt="Creator Profile">
-                        </div>
-                        <!-- PFP Upload Overlay Button -->
-                        <button onclick="document.getElementById('pfp-file-input').click()" class="absolute bottom-0 right-0 bg-cocoa text-cream p-2 rounded-full text-xs shadow hover:scale-110 transition border border-babypink" title="Change Profile Picture">
-                            <i class="fas fa-camera"></i>
-                        </button>
-                        <input type="file" id="pfp-file-input" accept="image/*" class="hidden" onchange="handlePfpUpload(event)">
-                    </div>
-
-                    <div>
-                        <h3 id="founder-title" class="font-dancing text-3xl font-bold text-cocoa">The Creator of Rosetta</h3>
-                        <p id="founder-subtitle" class="text-xs text-cocoasemi font-semibold mt-1">Founder & Softcore Aesthetic Curator</p>
-                    </div>
-
-                    <div class="bg-softbeige p-4 rounded-2xl border border-babypink">
-                        <p id="founder-bio" class="text-sm text-cocoalight leading-relaxed italic">
-                            "Welcome to my personal corner! I built Rosetta with love so everyone with a penchant for poetry, soft aesthetics, and deep feelings can share their talent safely and be celebrated."
+                <!-- Founder Header -->
+                <div class="flex flex-col md:flex-row items-center gap-6 pb-8 border-b border-cocoa/15 text-center md:text-left">
+                    <img id="founder-pfp-img" src="https://placehold.co/200x200/fcedf2/4a2d27?text=Founder" alt="Founder" class="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border-4 border-softcream shadow-md">
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold tracking-widest uppercase text-cocoa/70">Founder & Curator</span>
+                        <h2 id="founder-name-text" class="font-serif text-3xl text-cocoa font-bold">About Rosetta</h2>
+                        <p id="founder-bio-text" class="text-sm md:text-base text-cocoa/90 leading-relaxed max-w-xl font-body">
+                            Welcome to my quiet garden of verses. I established Rosetta to create a soft, aesthetic sanctuary where every writer, dreamer, and artist can express their talent freely.
                         </p>
                     </div>
-
-                    <!-- PFP Quick Reset -->
-                    <div class="pt-2 border-t border-babypink space-y-2">
-                        <button onclick="resetPfpToDefault()" class="w-full py-1.5 bg-roseblush hover:bg-softpink text-cocoa font-semibold rounded-xl text-xs border border-cocoa/10 transition flex items-center justify-center gap-1.5">
-                            <i class="fas fa-undo text-[10px]"></i> Reset Profile Picture
-                        </button>
-                    </div>
                 </div>
 
-                <!-- Daily Updates / Blog Feed (8 cols) -->
-                <div class="lg:col-span-8 bg-cream p-6 rounded-3xl border-4 border-softpink soft-shadow space-y-6">
-                    <div class="flex items-center justify-between border-b-2 border-babypink pb-4">
-                        <div>
-                            <h2 class="font-dancing text-3xl font-bold text-cocoa">Daily Updates & Thoughts</h2>
-                            <p class="text-xs text-cocoalight">Personal notes, daily musings, and updates from the Rosetta creator.</p>
-                        </div>
-                        <span class="px-3 py-1 bg-softpink text-cocoa text-xs font-bold rounded-full">Blog Feed</span>
-                    </div>
+                <!-- Daily Notes & Blog Feed -->
+                <div class="mt-8 space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-cocoa">Founder Notes & Daily Updates</h3>
 
-                    <!-- Admin Post Creator (Visible when Creator Mode active) -->
-                    <div id="admin-post-panel" class="hidden bg-softbeige p-4 rounded-2xl border-2 border-babypink space-y-3">
-                        <h4 class="font-bold text-sm text-cocoa"><i class="fas fa-edit"></i> Create New Daily Update (Creator Only)</h4>
-                        <textarea id="admin-update-text" placeholder="Share your daily update or poetry prompt..." class="w-full p-3 rounded-xl border border-softpink text-sm bg-cream focus:outline-none focus:border-cocoa h-24"></textarea>
-                        
-                        <div class="flex items-center justify-between flex-wrap gap-2">
-                            <div class="flex items-center gap-2">
-                                <input type="file" id="admin-media-input" accept="image/*" class="hidden" onchange="handleAdminMediaUpload(event)">
-                                <button onclick="document.getElementById('admin-media-input').click()" class="px-3 py-1.5 bg-babypink text-cocoa text-xs font-bold rounded-lg hover:bg-softpink border border-cocoa/10">
-                                    <i class="fas fa-camera"></i> Attach Photo
-                                </button>
-                                <span id="admin-media-preview-name" class="text-xs text-cocoasemi italic"></span>
-                            </div>
-                            <button onclick="publishCreatorUpdate()" class="px-5 py-1.5 bg-cocoa text-cream text-xs font-bold rounded-xl hover:bg-cocoalight">
-                                Post Update
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Updates Timeline -->
-                    <div id="updates-timeline" class="space-y-4">
-                        <!-- Dynamic updates loaded via JS -->
+                    <div id="founder-updates-feed" class="space-y-4">
+                        <!-- Populated dynamically -->
                     </div>
                 </div>
 
@@ -549,992 +387,666 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-cream border-t-4 border-softpink py-6 text-center text-xs text-cocoalight mt-12">
-        <div class="max-w-6xl mx-auto px-4 space-y-2">
-            <p class="font-dancing text-xl text-cocoa font-bold">Rosetta ❀ Softcore Poetry Haven</p>
-            <p>© 2026 Rosetta. Crafted with baby pink dreams, cocoa brown warmth, and polka dot magic.</p>
+    <footer class="w-full border-t border-cocoa/15 bg-cream/80 py-6 text-center text-xs text-cocoa/70 font-medium">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p>Rosetta — The Visual Diary &copy; 2026. All poems belong to their respective creators.</p>
+            <button onclick="openFounderModal()" class="hover:underline opacity-80 hover:opacity-100 flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Founder Portal</span>
+            </button>
         </div>
     </footer>
 
-    <!-- POEM READ MODAL -->
-    <div id="poem-modal" class="fixed inset-0 z-50 bg-cocoa/60 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-cream rounded-3xl max-w-2xl w-full border-4 border-softpink soft-shadow p-6 space-y-4 my-8 relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closePoemModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-softpink text-cocoa font-bold flex items-center justify-center hover:bg-babypink shadow">
-                ✕
+    <!-- READ POEM READER MODAL -->
+    <div id="read-rose-modal" class="fixed inset-0 bg-cocoa/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="rosetta-card w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 md:p-8 relative shadow-2xl flex flex-col justify-between border border-cocoa/30">
+            <button onclick="closeRoseModal()" class="absolute top-4 right-4 text-cocoa/70 hover:text-cocoa p-2 rounded-full hover:bg-softpink/40 transition-all z-30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </button>
 
-            <div id="modal-poem-content" class="min-h-[400px]">
-                <!-- Modal content rendered dynamically -->
+            <div id="modal-poem-canvas" class="w-full min-h-[460px] rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between shadow-inner border border-cocoa/20">
+                <div class="z-10 relative">
+                    <h2 id="modal-rose-title" class="text-2xl md:text-3xl font-serif font-bold mb-1"></h2>
+                    <p id="modal-rose-author" class="text-xs md:text-sm italic mb-6 opacity-85 font-medium"></p>
+                    <div id="modal-rose-body" class="whitespace-pre-wrap leading-relaxed"></div>
+                </div>
+
+                <div class="z-10 mt-6 pt-4 border-t border-cocoa/15 flex justify-between items-center text-[11px] font-semibold opacity-70">
+                    <span>Rosetta Published Rose</span>
+                    <span id="modal-rose-date"></span>
+                </div>
+
+                <div id="modal-stickers-layer" class="absolute inset-0 pointer-events-none z-20"></div>
             </div>
 
-            <!-- Comments & Rose Petals (Likes) Section -->
-            <div class="border-t-2 border-babypink pt-4 space-y-4">
-                <div class="flex items-center justify-between">
-                    <button id="modal-like-btn" onclick="likeCurrentPoem()" class="px-4 py-2 bg-softpink hover:bg-babypink text-cocoa rounded-full font-bold text-xs flex items-center gap-2 border border-cocoa/20">
-                        <i class="fas fa-heart text-red-500"></i> Drop a Rose Petal (<span id="modal-like-count">0</span>)
-                    </button>
-                    <span class="text-xs text-cocoalight font-semibold"><i class="fas fa-comments"></i> Reader Impressions</span>
-                </div>
-
-                <!-- Add Comment Input -->
-                <div class="flex gap-2">
-                    <input type="text" id="modal-comment-input" placeholder="Leave a sweet comment..." class="flex-grow px-3 py-2 rounded-xl text-xs border border-softpink bg-cream focus:outline-none">
-                    <button onclick="addPoemComment()" class="px-4 py-2 bg-cocoa text-cream font-bold text-xs rounded-xl hover:bg-cocoalight">
-                        Send
-                    </button>
-                </div>
-
-                <!-- Comments List -->
-                <div id="modal-comments-list" class="space-y-2 max-h-40 overflow-y-auto p-2 bg-softbeige rounded-xl">
-                    <!-- Comments loaded dynamically -->
-                </div>
+            <!-- Ambient Music Player -->
+            <div id="modal-audio-container" class="mt-4 pt-4 border-t border-cocoa/15 hidden">
+                <span class="text-xs text-cocoa font-bold block mb-1">Background Ambient Music:</span>
+                <audio id="modal-audio-player" controls class="w-full h-10 rounded-xl"></audio>
             </div>
         </div>
     </div>
 
-    <!-- LOGO CHANGE MODAL (Creator Only) -->
-    <div id="logo-modal" class="fixed inset-0 z-50 bg-cocoa/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-cream rounded-3xl max-w-md w-full border-4 border-softpink soft-shadow p-6 space-y-4 relative">
-            <button onclick="closeLogoModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-softpink text-cocoa font-bold flex items-center justify-center">✕</button>
-            <h3 class="font-dancing text-2xl font-bold text-cocoa">Customize Website Logo</h3>
-            <p class="text-xs text-cocoalight">Upload a custom photo or image to serve as the main logo for Rosetta.</p>
+    <!-- SECRET FOUNDER PORTAL MODAL -->
+    <div id="founder-portal-modal" class="fixed inset-0 bg-cocoa/60 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="rosetta-polka-card w-full max-w-xl rounded-3xl p-6 md:p-8 relative shadow-2xl space-y-6">
             
-            <input type="file" id="logo-file-input" accept="image/*" class="w-full text-xs text-cocoa border border-softpink p-2 rounded-xl bg-cream">
-            
-            <div class="flex justify-end gap-2 pt-2">
-                <button onclick="closeLogoModal()" class="px-4 py-2 bg-gray-200 text-xs font-bold text-cocoa rounded-xl">Cancel</button>
-                <button onclick="saveNewLogo()" class="px-4 py-2 bg-cocoa text-cream text-xs font-bold rounded-xl hover:bg-cocoalight">Save Logo</button>
-            </div>
-        </div>
-    </div>
+            <button onclick="closeFounderModal()" class="absolute top-4 right-4 text-cocoa/70 hover:text-cocoa p-2 rounded-full hover:bg-softpink/40 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-    <!-- ADMIN PIN PASSCODE MODAL -->
-    <div id="admin-pin-modal" class="fixed inset-0 z-50 bg-cocoa/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-cream rounded-3xl max-w-sm w-full border-4 border-softpink soft-shadow p-6 space-y-4 text-center">
-            <div class="w-12 h-12 bg-softpink rounded-full flex items-center justify-center mx-auto text-cocoa text-xl">
-                <i class="fas fa-user-shield"></i>
+            <!-- Passcode Gate -->
+            <div id="portal-lock-screen" class="text-center py-6 space-y-4">
+                <div class="w-16 h-16 mx-auto rounded-full bg-softpink/60 border border-cocoa/20 flex items-center justify-center text-cocoa shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-cocoa">Secret Founder Portal</h3>
+                <p class="text-xs text-cocoa/80 font-medium">Enter passcode to unlock admin controls.</p>
+                
+                <div class="max-w-xs mx-auto space-y-3">
+                    <input type="password" id="portal-passcode-input" placeholder="Passcode" class="w-full text-center px-4 py-2.5 rounded-xl border border-cocoa/30 bg-white text-cocoa tracking-widest focus:outline-none focus:ring-2 focus:ring-softpink font-bold">
+                    <button onclick="unlockFounderPortal()" class="w-full py-2.5 bg-cocoa text-softcream rounded-xl font-semibold hover:bg-deepcocoa transition-all text-sm">Unlock Portal</button>
+                    <p id="passcode-error" class="text-xs text-red-600 font-semibold hidden">Incorrect passcode.</p>
+                </div>
             </div>
-            <h3 class="font-dancing text-2xl font-bold text-cocoa">Creator Lock</h3>
-            <p class="text-xs text-cocoalight">Enter Creator Passcode to enable full inline editing of Preface Motive and Founder Bio.</p>
-            
-            <input type="password" id="admin-pin-input" placeholder="Enter Secure Passcode..." class="w-full px-4 py-2 text-center text-sm rounded-xl border-2 border-softpink bg-cream focus:outline-none focus:border-cocoa">
-            <p id="admin-pin-error" class="text-xs text-red-500 hidden font-bold">Incorrect passcode! Access denied.</p>
 
-            <div class="flex gap-2 justify-center pt-2">
-                <button onclick="closeAdminPinModal()" class="px-4 py-2 bg-gray-200 text-xs font-bold text-cocoa rounded-xl">Cancel</button>
-                <button onclick="verifyAdminPin()" class="px-4 py-2 bg-cocoa text-cream text-xs font-bold rounded-xl hover:bg-cocoalight">Unlock Creator Mode</button>
+            <!-- Unlocked Admin Controls -->
+            <div id="portal-admin-controls" class="hidden space-y-5 max-h-[75vh] overflow-y-auto pr-2">
+                <div class="border-b border-cocoa/15 pb-3 flex justify-between items-center">
+                    <h3 class="font-serif text-2xl font-bold text-cocoa">Founder Controls</h3>
+                    <span class="text-xs bg-softpink text-cocoa px-3 py-1 rounded-full font-bold">Unlocked</span>
+                </div>
+
+                <!-- 1. Change Site Logo -->
+                <div class="space-y-1.5">
+                    <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Update Site Logo</label>
+                    <input type="file" id="logo-file-input" accept="image/*" onchange="uploadSiteLogo(event)" class="w-full text-xs text-cocoa file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:bg-softpink file:text-cocoa hover:file:bg-borderpink font-medium">
+                </div>
+
+                <!-- 2. Change Founder PFP -->
+                <div class="space-y-1.5">
+                    <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Update Founder Profile Picture (PFP)</label>
+                    <input type="file" id="pfp-file-input" accept="image/*" onchange="uploadFounderPFP(event)" class="w-full text-xs text-cocoa file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:bg-softpink file:text-cocoa hover:file:bg-borderpink font-medium">
+                </div>
+
+                <!-- 3. Edit Founder Bio -->
+                <div class="space-y-1.5">
+                    <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Edit Founder Bio</label>
+                    <textarea id="admin-bio-input" rows="3" class="w-full p-3 rounded-xl border border-cocoa/30 bg-white text-cocoa text-xs focus:outline-none focus:ring-2 focus:ring-softpink"></textarea>
+                    <button onclick="saveFounderBio()" class="px-4 py-1.5 bg-cocoa text-softcream rounded-lg text-xs font-semibold hover:bg-deepcocoa">Save Bio</button>
+                </div>
+
+                <!-- 4. Edit Preface / Motive -->
+                <div class="space-y-1.5">
+                    <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Edit Preface / Motive Text</label>
+                    <textarea id="admin-preface-input" rows="3" class="w-full p-3 rounded-xl border border-cocoa/30 bg-white text-cocoa text-xs focus:outline-none focus:ring-2 focus:ring-softpink"></textarea>
+                    <button onclick="savePrefaceText()" class="px-4 py-1.5 bg-cocoa text-softcream rounded-lg text-xs font-semibold hover:bg-deepcocoa">Save Preface</button>
+                </div>
+
+                <!-- 5. Post Daily Updates / Notes -->
+                <div class="space-y-3 pt-3 border-t border-cocoa/15">
+                    <label class="block text-xs font-bold text-cocoa uppercase tracking-wider">Post Notes / Daily Update to "Know About Me"</label>
+                    <textarea id="admin-update-text" placeholder="Write today's note or update..." rows="3" class="w-full p-3 rounded-xl border border-cocoa/30 bg-white text-cocoa text-xs focus:outline-none focus:ring-2 focus:ring-softpink"></textarea>
+                    
+                    <div class="space-y-1">
+                        <span class="text-[11px] font-semibold text-cocoa/80 block">Optional Photo Media</span>
+                        <input type="file" id="update-photo-input" accept="image/*" class="w-full text-xs text-cocoa file:mr-4 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:bg-softpink file:text-cocoa">
+                    </div>
+
+                    <button onclick="postFounderUpdate()" class="w-full py-2.5 bg-cocoa text-softcream rounded-xl text-xs font-bold hover:bg-deepcocoa transition-all shadow-md">Publish Founder Note</button>
+                </div>
+
             </div>
         </div>
     </div>
 
     <script>
-        // DATA STRUCTURES & SECURE CONSTANTS
-        const SECURE_ADMIN_PASSCODE = "12082009@aV";
-
-        const DEFAULT_PREFACE = {
-            badge: "Welcome to Rosetta",
-            heading: "Give Words To Your Heart & Let Your Talent Bloom",
-            motive: "Rosetta was created as a gentle, safe haven for passionate poets and creative souls. Here, every poem is a sacred Rose. Craft your verses with whimsical fonts, background music, pastel colors, and aesthetic stickers. Share your soul's music and be recognized by a kind community."
-        };
-
-        const DEFAULT_FOUNDER = {
-            title: "The Creator of Rosetta",
-            subtitle: "Founder & Softcore Aesthetic Curator",
-            bio: '"Welcome to my personal corner! I built Rosetta with love so everyone with a penchant for poetry, soft aesthetics, and deep feelings can share their talent safely and be celebrated."'
-        };
-
-        let isCreatorMode = false;
-
-        let poems = JSON.parse(localStorage.getItem('rosetta_poems')) || [
-            {
-                id: 'p1',
-                title: 'Petals in the Morning Dew',
-                author: 'Rosemary Vine',
-                date: 'May 14, 2026',
-                text: 'In the soft light of dawn,\nA delicate rose blooms quietly.\nIts petals hold the secrets of yesterday,\nAnd the gentle promises of tomorrow...',
-                bgColor: '#FFF9F5',
-                bgImage: '',
-                fontClass: 'font-dancing',
-                fontColor: '#3D2314',
-                fontSize: '24px',
-                textAlign: 'center',
-                stickers: [
-                    { content: '🌹', left: '10%', top: '15%', type: 'emoji', size: 36, rotation: 0, zIndex: 10 },
-                    { content: '✨', left: '80%', top: '20%', type: 'emoji', size: 32, rotation: 15, zIndex: 10 },
-                    { content: '🎀', left: '85%', top: '75%', type: 'emoji', size: 40, rotation: -10, zIndex: 10 }
-                ],
-                audioData: 'synth-lofi',
-                likes: 12,
-                comments: ['So peaceful!', 'This resonated deeply with my soul.']
-            },
-            {
-                id: 'p2',
-                title: 'Cocoa Brown Evening',
-                author: 'Aesthetic Dreamer',
-                date: 'May 18, 2026',
-                text: 'Sipping warm cocoa under polka dot skies,\nWhere soft pink clouds float gently by.\nWords spoken in whispers, sweet and slow,\nWhere love is the only thing we know.',
-                bgColor: '#F7EBE1',
-                bgImage: '',
-                fontClass: 'font-caveat',
-                fontColor: '#5C3A21',
-                fontSize: '22px',
-                textAlign: 'center',
-                stickers: [
-                    { content: '☕', left: '15%', top: '70%', type: 'emoji', size: 38, rotation: 0, zIndex: 10 },
-                    { content: '🕯️', left: '78%', top: '65%', type: 'emoji', size: 36, rotation: 0, zIndex: 10 }
-                ],
-                audioData: 'synth-acoustic',
-                likes: 19,
-                comments: ['Cozy vibes!', 'Beautiful imagery.']
-            }
+        // 20 Pastel Tints, Tones, and Shades
+        const PASTEL_PALETTE = [
+            { name: "Soft Rose", hex: "#fcedf2" },
+            { name: "Lavender Blush", hex: "#fff0f5" },
+            { name: "Mint Mist", hex: "#e8f5e9" },
+            { name: "Powder Blue", hex: "#e3f2fd" },
+            { name: "Peach Cream", hex: "#fff4e6" },
+            { name: "Sage Tint", hex: "#f1f8e9" },
+            { name: "Lilac Breeze", hex: "#f3e5f5" },
+            { name: "Buttercream", hex: "#fffde7" },
+            { name: "Vanilla Sand", hex: "#faf0e6" },
+            { name: "Sky Silk", hex: "#e0f7fa" },
+            { name: "Powder Lilac", hex: "#ede7f6" },
+            { name: "Dusty Rose", hex: "#f8d7e3" },
+            { name: "Chiffon Yellow", hex: "#fffbf0" },
+            { name: "Seafoam Tint", hex: "#f0f7ee" },
+            { name: "Mauve Mist", hex: "#f5e6e8" },
+            { name: "Shell Pink", hex: "#fce4ec" },
+            { name: "Warm Apricot", hex: "#ffebe8" },
+            { name: "Pale Coral", hex: "#f8eeec" },
+            { name: "Muted Fig", hex: "#efebe9" },
+            { name: "Soft Periwinkle", hex: "#e1f5fe" }
         ];
 
-        let creatorUpdates = JSON.parse(localStorage.getItem('rosetta_updates')) || [
-            {
-                id: 'u1',
-                date: 'May 20, 2026',
-                text: 'Welcome to Rosetta! Today I added interactive sticker controls so you can move, rotate, and resize stickers on your poem page. Keep blooming!',
-                image: ''
-            }
-        ];
+        let currentCanvasBg = "#fcedf2";
+        let uploadedStickers = [];
+        let attachedMusicData = null;
+        let selectedStickerIndex = null;
 
-        let currentActivePoemId = null;
-        let activeStickerDrag = null;
-        let dragOffset = { x: 0, y: 0 };
-        let customAudioDataUrl = '';
-        let customBgImageUrl = '';
-        let tempAdminMediaUrl = '';
-        let audioSynthContext = null;
-        let synthOscillators = [];
-        let highestZIndex = 10;
+        const poemCanvas = document.getElementById('poem-canvas');
+        const fontSelect = document.getElementById('rose-font-select');
+        const colorPicker = document.getElementById('rose-color-picker');
+        const fontSizeSlider = document.getElementById('rose-fontsize-slider');
 
-        // INITIALIZATION ON PAGE LOAD
         window.onload = function() {
-            renderBgColorPresets();
-            renderRosesGallery();
-            renderUpdatesTimeline();
-            loadCustomLogo();
-            loadCustomPfp();
-            loadCustomPrefaceAndFounderData();
-            updateCanvasTextStyle();
+            renderPastelPalette();
+            loadStoredSiteData();
+            loadPublishedRoses();
+            loadFounderUpdates();
+            
+            document.getElementById('canvas-date').innerText = new Date().toLocaleDateString('en-US', {
+                month: 'short', day: 'numeric', year: 'numeric'
+            });
+
+            setupStickerInteraction();
         };
 
-        // NAVIGATION TAB SWITCHER
-        function switchTab(tabName) {
-            const tabs = ['home', 'publish', 'read', 'about'];
-            tabs.forEach(t => {
-                const el = document.getElementById(`tab-${t}`);
-                const btn = document.getElementById(`nav-${t}`);
-                if (t === tabName) {
+        function switchTab(tabId) {
+            ['home', 'publish', 'read', 'about'].forEach(id => {
+                const el = document.getElementById('tab-' + id);
+                const nav = document.getElementById('nav-' + id);
+                if (id === tabId) {
                     el.classList.remove('hidden');
-                    btn.classList.add('bg-babypink', 'shadow-sm', 'border', 'border-cocoalight/20');
-                    btn.classList.remove('hover:bg-softpink/40');
+                    if (nav) nav.classList.add('bg-softpink/60', 'font-bold');
                 } else {
                     el.classList.add('hidden');
-                    btn.classList.remove('bg-babypink', 'shadow-sm', 'border', 'border-cocoalight/20');
-                    btn.classList.add('hover:bg-softpink/40');
+                    if (nav) nav.classList.remove('bg-softpink/60', 'font-bold');
                 }
             });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // CREATOR / ADMIN EDITING MODE TOGGLE WITH STRICT PASSCODE
-        function promptAdminMode() {
-            if (isCreatorMode) {
-                setCreatorMode(false);
-            } else {
-                document.getElementById('admin-pin-modal').classList.remove('hidden');
-                document.getElementById('admin-pin-input').value = '';
-                document.getElementById('admin-pin-error').classList.add('hidden');
-                document.getElementById('admin-pin-input').focus();
-            }
-        }
-
-        function closeAdminPinModal() {
-            document.getElementById('admin-pin-modal').classList.add('hidden');
-            document.getElementById('admin-pin-error').classList.add('hidden');
-            document.getElementById('admin-pin-input').value = '';
-        }
-
-        function verifyAdminPin() {
-            const pin = document.getElementById('admin-pin-input').value;
-            if (pin === SECURE_ADMIN_PASSCODE) {
-                closeAdminPinModal();
-                setCreatorMode(true);
-            } else {
-                document.getElementById('admin-pin-error').classList.remove('hidden');
-            }
-        }
-
-        function setCreatorMode(active) {
-            isCreatorMode = active;
-            const badgeText = document.getElementById('admin-badge-text');
-            const icon = document.getElementById('admin-lock-icon');
-            const btn = document.getElementById('admin-mode-toggle');
-
-            const prefaceBar = document.getElementById('preface-admin-bar');
-            const aboutBar = document.getElementById('about-admin-bar');
-            const postPanel = document.getElementById('admin-post-panel');
-
-            const prefaceHeading = document.getElementById('preface-heading');
-            const prefaceMotive = document.getElementById('preface-motive-text');
-            const prefaceBadge = document.getElementById('preface-badge');
-
-            const founderTitle = document.getElementById('founder-title');
-            const founderSubtitle = document.getElementById('founder-subtitle');
-            const founderBio = document.getElementById('founder-bio');
-
-            if (active) {
-                btn.className = "px-3 py-1.5 rounded-full font-bold text-xs transition flex items-center gap-1.5 bg-green-700 text-white border border-green-300 shadow animate-pulse";
-                icon.className = "fas fa-lock-open text-yellow-200";
-                badgeText.innerText = "Creator Mode: ON";
-
-                prefaceBar.classList.remove('hidden');
-                aboutBar.classList.remove('hidden');
-                postPanel.classList.remove('hidden');
-
-                prefaceHeading.contentEditable = "true";
-                prefaceMotive.contentEditable = "true";
-                prefaceBadge.contentEditable = "true";
-
-                founderTitle.contentEditable = "true";
-                founderSubtitle.contentEditable = "true";
-                founderBio.contentEditable = "true";
-
-                prefaceHeading.classList.add('editable-highlight');
-                prefaceMotive.classList.add('editable-highlight');
-                prefaceBadge.classList.add('editable-highlight');
-
-                founderTitle.classList.add('editable-highlight');
-                founderSubtitle.classList.add('editable-highlight');
-                founderBio.classList.add('editable-highlight');
-
-            } else {
-                btn.className = "px-3 py-1.5 rounded-full font-bold text-xs transition flex items-center gap-1.5 bg-cocoa text-cream hover:bg-cocoalight border border-babypink shadow";
-                icon.className = "fas fa-lock text-softpink";
-                badgeText.innerText = "Creator Mode";
-
-                prefaceBar.classList.add('hidden');
-                aboutBar.classList.add('hidden');
-                postPanel.classList.add('hidden');
-
-                prefaceHeading.contentEditable = "false";
-                prefaceMotive.contentEditable = "false";
-                prefaceBadge.contentEditable = "false";
-
-                founderTitle.contentEditable = "false";
-                founderSubtitle.contentEditable = "false";
-                founderBio.contentEditable = "false";
-
-                prefaceHeading.classList.remove('editable-highlight');
-                prefaceMotive.classList.remove('editable-highlight');
-                prefaceBadge.classList.remove('editable-highlight');
-
-                founderTitle.classList.remove('editable-highlight');
-                founderSubtitle.classList.remove('editable-highlight');
-                founderBio.classList.remove('editable-highlight');
-            }
-        }
-
-        // SAVE & LOAD EDITABLE DATA
-        function savePrefaceEdits() {
-            const data = {
-                badge: document.getElementById('preface-badge').innerText.trim(),
-                heading: document.getElementById('preface-heading').innerText.trim(),
-                motive: document.getElementById('preface-motive-text').innerText.trim()
-            };
-            localStorage.setItem('rosetta_custom_preface', JSON.stringify(data));
-            alert('Preface Motive saved successfully!');
-        }
-
-        function resetPrefaceToDefault() {
-            document.getElementById('preface-badge').innerText = DEFAULT_PREFACE.badge;
-            document.getElementById('preface-heading').innerText = DEFAULT_PREFACE.heading;
-            document.getElementById('preface-motive-text').innerText = DEFAULT_PREFACE.motive;
-            localStorage.removeItem('rosetta_custom_preface');
-        }
-
-        function saveFounderEdits() {
-            const data = {
-                title: document.getElementById('founder-title').innerText.trim(),
-                subtitle: document.getElementById('founder-subtitle').innerText.trim(),
-                bio: document.getElementById('founder-bio').innerText.trim()
-            };
-            localStorage.setItem('rosetta_custom_founder', JSON.stringify(data));
-            alert('Founder Bio & Info saved successfully!');
-        }
-
-        function resetFounderToDefault() {
-            document.getElementById('founder-title').innerText = DEFAULT_FOUNDER.title;
-            document.getElementById('founder-subtitle').innerText = DEFAULT_FOUNDER.subtitle;
-            document.getElementById('founder-bio').innerText = DEFAULT_FOUNDER.bio;
-            localStorage.removeItem('rosetta_custom_founder');
-        }
-
-        function loadCustomPrefaceAndFounderData() {
-            const pref = JSON.parse(localStorage.getItem('rosetta_custom_preface'));
-            if (pref) {
-                if (pref.badge) document.getElementById('preface-badge').innerText = pref.badge;
-                if (pref.heading) document.getElementById('preface-heading').innerText = pref.heading;
-                if (pref.motive) document.getElementById('preface-motive-text').innerText = pref.motive;
-            }
-
-            const fnd = JSON.parse(localStorage.getItem('rosetta_custom_founder'));
-            if (fnd) {
-                if (fnd.title) document.getElementById('founder-title').innerText = fnd.title;
-                if (fnd.subtitle) document.getElementById('founder-subtitle').innerText = fnd.subtitle;
-                if (fnd.bio) document.getElementById('founder-bio').innerText = fnd.bio;
-            }
-        }
-
-        // EDITOR: PASTEL COLOR PICKER
-        function renderBgColorPresets() {
-            const colors = [
-                '#FFF9F5', '#F8C8DC', '#FFB6C1', '#FFE4E1', '#F7EBE1', '#E8A0BF',
-                '#E2F0D9', '#E6E6FA', '#FFF0F5', '#F0F8FF', '#FAF0E6', '#F5FEFD'
-            ];
-            const picker = document.getElementById('bg-color-picker');
-            picker.innerHTML = '';
-            colors.forEach(color => {
+        function renderPastelPalette() {
+            const container = document.getElementById('pastel-palette-container');
+            container.innerHTML = '';
+            PASTEL_PALETTE.forEach((color) => {
                 const btn = document.createElement('button');
-                btn.className = 'w-7 h-7 rounded-full border-2 border-cocoa/20 transition hover:scale-110 shadow-sm';
-                btn.style.backgroundColor = color;
+                btn.type = 'button';
+                btn.className = 'w-full h-8 rounded-lg border border-cocoa/20 transition-transform hover:scale-110 shadow-sm';
+                btn.style.backgroundColor = color.hex;
+                btn.title = color.name;
                 btn.onclick = () => {
-                    document.getElementById('poem-canvas').style.backgroundColor = color;
+                    currentCanvasBg = color.hex;
+                    poemCanvas.style.backgroundColor = color.hex;
                 };
-                picker.appendChild(btn);
+                container.appendChild(btn);
             });
         }
 
-        // EDITOR: TEXT STYLING UPDATES
-        function updateCanvasTextStyle() {
-            const textInput = document.getElementById('poem-text-input');
-            const fontSelect = document.getElementById('font-family-select').value;
-            const fontColor = document.getElementById('font-color-wheel').value;
-            const fontSize = document.getElementById('font-size-range').value + 'px';
+        function updateCanvasStyle() {
+            const selectedFont = fontSelect.value;
+            const selectedColor = colorPicker.value;
+            const selectedSize = fontSizeSlider.value + 'px';
 
-            textInput.className = textInput.className.replace(/font-\w+/g, '');
-            textInput.classList.add(fontSelect);
-            textInput.style.color = fontColor;
-            textInput.style.fontSize = fontSize;
+            document.getElementById('color-hex-label').innerText = selectedColor.toUpperCase();
+
+            const body = document.getElementById('canvas-body');
+            const title = document.getElementById('canvas-title');
+            const author = document.getElementById('canvas-author');
+
+            body.style.fontFamily = selectedFont;
+            body.style.color = selectedColor;
+            body.style.fontSize = selectedSize;
+
+            title.style.fontFamily = selectedFont;
+            title.style.color = selectedColor;
+
+            author.style.fontFamily = selectedFont;
+            author.style.color = selectedColor;
         }
 
-        function setTextAlign(align) {
-            document.getElementById('poem-text-input').style.textAlign = align;
-        }
+        function handleStickerUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
 
-        function updateCanvasText() {
-            const title = document.getElementById('editor-title').value.trim() || 'Title of Your Rose';
-            const author = document.getElementById('editor-author').value.trim() || 'Poet Name';
-            document.getElementById('canvas-title-preview').innerText = title;
-            document.getElementById('canvas-author-preview').innerText = 'by ' + author;
-        }
-
-        // EDITOR: BACKGROUND IMAGE
-        function handleBgImageUpload(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    customBgImageUrl = evt.target.result;
-                    document.getElementById('canvas-bg-overlay').style.backgroundImage = `url(${customBgImageUrl})`;
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function clearBgImage() {
-            customBgImageUrl = '';
-            document.getElementById('canvas-bg-overlay').style.backgroundImage = 'none';
-        }
-
-        // INTERACTIVE STICKER SYSTEM (MOVE, ROTATE, RESIZE, LAYER)
-        function addEmojiSticker(emoji) {
-            createInteractiveSticker(emoji, '40%', '30%', 'emoji', 36, 0, ++highestZIndex);
-        }
-
-        function handleStickerUpload(e) {
-            const file = e.target.files[0];
-            const removeBg = document.getElementById('bg-remove-toggle').checked;
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    let src = evt.target.result;
-                    if (removeBg) {
-                        simulateBackgroundRemoval(src, (processedSrc) => {
-                            createInteractiveSticker(processedSrc, '35%', '35%', 'image', 80, 0, ++highestZIndex);
-                        });
-                    } else {
-                        createInteractiveSticker(src, '35%', '35%', 'image', 80, 0, ++highestZIndex);
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    let finalSrc = e.target.result;
+                    if (document.getElementById('sticker-remove-bg').checked) {
+                        finalSrc = removeWhiteBackground(img);
                     }
+                    addStickerToCanvas(finalSrc);
                 };
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function simulateBackgroundRemoval(imageSrc, callback) {
-            const img = new Image();
-            img.onload = function() {
-                const canvas = document.createElement('canvas');
-                canvas.width = img.width;
-                canvas.height = img.height;
-                const ctx = canvas.getContext('2d');
-                ctx.drawImage(img, 0, 0);
-
-                const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                const data = imgData.data;
-
-                for (let i = 0; i < data.length; i += 4) {
-                    const r = data[i], g = data[i+1], b = data[i+2];
-                    if (r > 220 && g > 220 && b > 220) {
-                        data[i + 3] = 0;
-                    }
-                }
-                ctx.putImageData(imgData, 0, 0);
-                callback(canvas.toDataURL());
+                img.src = e.target.result;
             };
-            img.src = imageSrc;
+            reader.readAsDataURL(file);
         }
 
-        function createInteractiveSticker(content, left, top, type, size = 36, rotation = 0, zIndex = 10) {
-            const container = document.getElementById('stickers-container');
-            const wrapper = document.createElement('div');
-            wrapper.className = 'placed-sticker p-2 group flex flex-col items-center';
-            wrapper.style.left = left;
-            wrapper.style.top = top;
-            wrapper.style.zIndex = zIndex;
-            wrapper.dataset.type = type;
-            wrapper.dataset.content = content;
-            wrapper.dataset.size = size;
-            wrapper.dataset.rotation = rotation;
+        function removeWhiteBackground(img) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
 
-            applyStickerTransforms(wrapper);
+            const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imgData.data;
 
-            if (type === 'emoji') {
-                wrapper.innerHTML = `<span class="sticker-element select-none pointer-events-none filter drop-shadow leading-none" style="font-size: ${size}px;">${content}</span>`;
-            } else {
-                wrapper.innerHTML = `<img src="${content}" class="sticker-element object-contain pointer-events-none filter drop-shadow" style="width: ${size}px; height: ${size}px;">`;
+            for (let i = 0; i < data.length; i += 4) {
+                const r = data[i];
+                const g = data[i+1];
+                const b = data[i+2];
+                if (r > 220 && g > 220 && b > 220) {
+                    data[i + 3] = 0;
+                }
             }
 
-            // Sticker control buttons bar
-            const toolbar = document.createElement('div');
-            toolbar.className = 'sticker-toolbar absolute -top-8 bg-cocoa text-cream text-[10px] rounded-full px-2 py-1 gap-1.5 shadow-lg z-50 flex items-center';
-            toolbar.innerHTML = `
-                <button onclick="rotateSticker(event, this, -15)" class="hover:text-babypink" title="Rotate Counter-Clockwise"><i class="fas fa-undo"></i></button>
-                <button onclick="rotateSticker(event, this, 15)" class="hover:text-babypink" title="Rotate Clockwise"><i class="fas fa-redo"></i></button>
-                <button onclick="resizeSticker(event, this, -6)" class="hover:text-babypink" title="Decrease Size"><i class="fas fa-minus"></i></button>
-                <button onclick="resizeSticker(event, this, 6)" class="hover:text-babypink" title="Increase Size"><i class="fas fa-plus"></i></button>
-                <button onclick="bringStickerForward(event, this)" class="hover:text-babypink" title="Bring Forward"><i class="fas fa-layer-group"></i></button>
-                <button onclick="removeSticker(event, this)" class="hover:text-red-300" title="Delete Sticker"><i class="fas fa-trash"></i></button>
-            `;
-            wrapper.appendChild(toolbar);
-
-            // Selection & drag handlers
-            wrapper.onclick = (e) => selectSticker(e, wrapper);
-            wrapper.onmousedown = (e) => startStickerDrag(e, wrapper);
-            wrapper.ontouchstart = (e) => startStickerDrag(e, wrapper);
-
-            container.appendChild(wrapper);
-            selectSticker(null, wrapper);
+            ctx.putImageData(imgData, 0, 0);
+            return canvas.toDataURL();
         }
 
-        function applyStickerTransforms(wrapper) {
-            const rotation = wrapper.dataset.rotation || 0;
-            wrapper.style.transform = `rotate(${rotation}deg)`;
+        function addStickerToCanvas(src) {
+            const stickerObj = {
+                id: 'sticker_' + Date.now(),
+                src: src,
+                x: 40,
+                y: 40,
+                width: 120,
+                rotation: 0
+            };
+
+            uploadedStickers.push(stickerObj);
+            renderStickers();
         }
 
-        function selectSticker(e, wrapper) {
-            if (e) e.stopPropagation();
-            document.querySelectorAll('.placed-sticker').forEach(st => st.classList.remove('selected'));
-            wrapper.classList.add('selected');
+        function renderStickers() {
+            const layer = document.getElementById('canvas-stickers-layer');
+            layer.innerHTML = '';
+
+            uploadedStickers.forEach((stk, idx) => {
+                const wrapper = document.createElement('div');
+                wrapper.className = `sticker-container pointer-events-auto ${selectedStickerIndex === idx ? 'selected' : ''}`;
+                wrapper.style.left = stk.x + 'px';
+                wrapper.style.top = stk.y + 'px';
+                wrapper.style.transform = `rotate(${stk.rotation}deg)`;
+
+                const img = document.createElement('img');
+                img.src = stk.src;
+                img.style.width = stk.width + 'px';
+                img.style.height = 'auto';
+                img.className = 'pointer-events-none rounded-lg';
+
+                if (selectedStickerIndex === idx) {
+                    const handle = document.createElement('div');
+                    handle.className = 'w-4 h-4 bg-cocoa rounded-full absolute -bottom-2 -right-2 cursor-nwse-resize shadow-md';
+                    handle.onmousedown = (e) => startResizeSticker(e, idx);
+                    wrapper.appendChild(handle);
+
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.innerHTML = '&times;';
+                    deleteBtn.className = 'w-5 h-5 bg-red-600 text-white rounded-full absolute -top-2 -right-2 flex items-center justify-center text-xs shadow-md font-bold';
+                    deleteBtn.onclick = (e) => {
+                        e.stopPropagation();
+                        uploadedStickers.splice(idx, 1);
+                        selectedStickerIndex = null;
+                        renderStickers();
+                    };
+                    wrapper.appendChild(deleteBtn);
+                }
+
+                wrapper.onmousedown = (e) => startDragSticker(e, idx);
+
+                wrapper.appendChild(img);
+                layer.appendChild(wrapper);
+            });
         }
 
-        function deselectAllStickers(e) {
-            if (e.target.closest('.placed-sticker')) return;
-            document.querySelectorAll('.placed-sticker').forEach(st => st.classList.remove('selected'));
-        }
-
-        function startStickerDrag(e, wrapper) {
+        function startDragSticker(e, idx) {
             e.stopPropagation();
-            selectSticker(null, wrapper);
-            activeStickerDrag = wrapper;
+            selectedStickerIndex = idx;
+            renderStickers();
 
-            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-            const rect = activeStickerDrag.getBoundingClientRect();
-            dragOffset.x = clientX - rect.left;
-            dragOffset.y = clientY - rect.top;
+            const stk = uploadedStickers[idx];
+            let startX = e.clientX;
+            let startY = e.clientY;
 
-            document.onmousemove = moveStickerDrag;
-            document.ontouchmove = moveStickerDrag;
-            document.onmouseup = stopStickerDrag;
-            document.ontouchend = stopStickerDrag;
-        }
-
-        function moveStickerDrag(e) {
-            if (!activeStickerDrag) return;
-            const parent = document.getElementById('poem-canvas').getBoundingClientRect();
-            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-
-            let x = clientX - parent.left - dragOffset.x;
-            let y = clientY - parent.top - dragOffset.y;
-
-            activeStickerDrag.style.left = `${(x / parent.width) * 100}%`;
-            activeStickerDrag.style.top = `${(y / parent.height) * 100}%`;
-        }
-
-        function stopStickerDrag() {
-            activeStickerDrag = null;
-            document.onmousemove = null;
-            document.ontouchmove = null;
-        }
-
-        function rotateSticker(e, btn, delta) {
-            if (e) e.stopPropagation();
-            const wrapper = btn.closest('.placed-sticker');
-            let current = parseInt(wrapper.dataset.rotation || '0');
-            current = (current + delta) % 360;
-            wrapper.dataset.rotation = current;
-            applyStickerTransforms(wrapper);
-        }
-
-        function resizeSticker(e, btn, delta) {
-            if (e) e.stopPropagation();
-            const wrapper = btn.closest('.placed-sticker');
-            let current = parseInt(wrapper.dataset.size || '36');
-            current = Math.max(16, Math.min(200, current + delta));
-            wrapper.dataset.size = current;
-
-            const el = wrapper.querySelector('.sticker-element');
-            if (wrapper.dataset.type === 'emoji') {
-                el.style.fontSize = `${current}px`;
-            } else {
-                el.style.width = `${current}px`;
-                el.style.height = `${current}px`;
+            function onMouseMove(e) {
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                stk.x += dx;
+                stk.y += dy;
+                startX = e.clientX;
+                startY = e.clientY;
+                renderStickers();
             }
-        }
 
-        function bringStickerForward(e, btn) {
-            if (e) e.stopPropagation();
-            const wrapper = btn.closest('.placed-sticker');
-            highestZIndex += 1;
-            wrapper.style.zIndex = highestZIndex;
-        }
-
-        function removeSticker(e, btn) {
-            if (e) e.stopPropagation();
-            btn.closest('.placed-sticker').remove();
-        }
-
-        // MUSIC HANDLING
-        function handlePresetMusicChange() {
-            const val = document.getElementById('preset-music-select').value;
-            const badge = document.getElementById('canvas-music-badge');
-            if (val !== 'none') {
-                badge.classList.remove('hidden');
-                badge.classList.add('flex');
-                document.getElementById('music-badge-text').innerText = 'Preset Ambient Music Active';
-            } else if (!customAudioDataUrl) {
-                badge.classList.add('hidden');
+            function onMouseUp() {
+                window.removeEventListener('mousemove', onMouseMove);
+                window.removeEventListener('mouseup', onMouseUp);
             }
+
+            window.addEventListener('mousemove', onMouseMove);
+            window.addEventListener('mouseup', onMouseUp);
         }
 
-        function handleAudioUpload(e) {
-            const file = e.target.files[0];
-            if (file) {
-                document.getElementById('uploaded-audio-name').innerText = file.name;
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    customAudioDataUrl = evt.target.result;
-                    const badge = document.getElementById('canvas-music-badge');
-                    badge.classList.remove('hidden');
-                    badge.classList.add('flex');
-                    document.getElementById('music-badge-text').innerText = file.name;
-                };
-                reader.readAsDataURL(file);
+        function startResizeSticker(e, idx) {
+            e.stopPropagation();
+            const stk = uploadedStickers[idx];
+            let startX = e.clientX;
+
+            function onMouseMove(e) {
+                const dx = e.clientX - startX;
+                stk.width = Math.max(30, stk.width + dx);
+                startX = e.clientX;
+                renderStickers();
             }
+
+            function onMouseUp() {
+                window.removeEventListener('mousemove', onMouseMove);
+                window.removeEventListener('mouseup', onMouseUp);
+            }
+
+            window.addEventListener('mousemove', onMouseMove);
+            window.addEventListener('mouseup', onMouseUp);
         }
 
-        // PUBLISH POEM
-        function publishPoem() {
-            const title = document.getElementById('editor-title').value.trim();
-            const author = document.getElementById('editor-author').value.trim();
-            const text = document.getElementById('poem-text-input').value.trim();
+        function setupStickerInteraction() {
+            poemCanvas.onclick = (e) => {
+                if (e.target === poemCanvas || e.target.id === 'canvas-stickers-layer') {
+                    selectedStickerIndex = null;
+                    renderStickers();
+                }
+            };
+        }
 
-            if (!title || !text) {
-                alert('Please enter both a title and text for your rose poem!');
+        function handleMusicUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                attachedMusicData = e.target.result;
+                const audioPreview = document.getElementById('poem-audio-preview');
+                audioPreview.src = attachedMusicData;
+                audioPreview.classList.remove('hidden');
+                document.getElementById('music-filename-label').innerText = file.name;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function publishRose() {
+            const title = document.getElementById('rose-title-input').value.trim() || document.getElementById('canvas-title').innerText.trim() || "Untitled Rose";
+            const author = document.getElementById('rose-author-input').value.trim() || document.getElementById('canvas-author').innerText.trim() || "Anonymous Writer";
+            const body = document.getElementById('canvas-body').innerText.trim();
+
+            if (!body) {
+                alert("Please write your poem before publishing!");
                 return;
             }
 
-            const stickerEls = document.querySelectorAll('#stickers-container .placed-sticker');
-            const stickersData = [];
-            stickerEls.forEach(el => {
-                stickersData.push({
-                    type: el.dataset.type,
-                    content: el.dataset.content,
-                    left: el.style.left,
-                    top: el.style.top,
-                    size: parseInt(el.dataset.size || '36'),
-                    rotation: parseInt(el.dataset.rotation || '0'),
-                    zIndex: el.style.zIndex || '10'
-                });
-            });
-
-            const fontSelect = document.getElementById('font-family-select').value;
-            const fontColor = document.getElementById('font-color-wheel').value;
-            const fontSize = document.getElementById('font-size-range').value + 'px';
-            const bgColor = document.getElementById('poem-canvas').style.backgroundColor || '#FFF9F5';
-            const presetAudio = document.getElementById('preset-music-select').value;
-            const finalAudio = customAudioDataUrl || (presetAudio !== 'none' ? presetAudio : '');
-
-            const newPoem = {
-                id: 'p_' + Date.now(),
+            const rose = {
+                id: 'rose_' + Date.now(),
                 title: title,
-                author: author || 'Anonymous Rose',
-                date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-                text: text,
-                bgColor: bgColor,
-                bgImage: customBgImageUrl,
-                fontClass: fontSelect,
-                fontColor: fontColor,
-                fontSize: fontSize,
-                textAlign: document.getElementById('poem-text-input').style.textAlign || 'center',
-                stickers: stickersData,
-                audioData: finalAudio,
-                likes: 0,
-                comments: []
+                author: author,
+                body: body,
+                bg: currentCanvasBg,
+                font: fontSelect.value,
+                color: colorPicker.value,
+                fontSize: fontSizeSlider.value + 'px',
+                stickers: uploadedStickers,
+                music: attachedMusicData,
+                date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
             };
 
-            poems.unshift(newPoem);
-            localStorage.setItem('rosetta_poems', JSON.stringify(poems));
+            const existing = JSON.parse(localStorage.getItem('rosetta_roses') || '[]');
+            existing.unshift(rose);
+            localStorage.setItem('rosetta_roses', JSON.stringify(existing));
 
-            document.getElementById('editor-title').value = '';
-            document.getElementById('poem-text-input').value = '';
-            document.getElementById('stickers-container').innerHTML = '';
-            clearBgImage();
+            document.getElementById('rose-title-input').value = '';
+            document.getElementById('rose-author-input').value = '';
+            document.getElementById('canvas-body').innerText = '';
+            uploadedStickers = [];
+            attachedMusicData = null;
+            document.getElementById('poem-audio-preview').classList.add('hidden');
+            document.getElementById('music-filename-label').innerText = 'Attach MP3 / Audio Track';
+            renderStickers();
 
-            renderRosesGallery();
+            loadPublishedRoses();
             switchTab('read');
         }
 
-        // READ ROSES: GALLERY & FILTER
-        function renderRosesGallery(filtered = null) {
-            const grid = document.getElementById('roses-grid');
-            const emptyMsg = document.getElementById('empty-roses-msg');
-            const list = filtered || poems;
+        function loadPublishedRoses() {
+            const grid = document.getElementById('roses-gallery-grid');
+            const roses = JSON.parse(localStorage.getItem('rosetta_roses') || '[]');
 
-            grid.innerHTML = '';
-
-            if (list.length === 0) {
-                emptyMsg.classList.remove('hidden');
-                return;
-            } else {
-                emptyMsg.classList.add('hidden');
-            }
-
-            list.forEach(poem => {
-                const card = document.createElement('div');
-                card.className = 'bg-cream rounded-2xl p-5 border-2 border-softpink soft-shadow hover:scale-[1.02] transition cursor-pointer flex flex-col justify-between relative overflow-hidden group';
-                card.onclick = () => openPoemModal(poem.id);
-
-                card.innerHTML = `
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between text-xs text-cocoalight">
-                            <span class="font-bold text-deeprose">❀ Rose Poem</span>
-                            <span>${poem.date}</span>
-                        </div>
-                        <h3 class="font-dancing text-2xl font-bold text-cocoa truncate">${poem.title}</h3>
-                        <p class="text-xs italic text-cocoalight font-semibold">by ${poem.author}</p>
-                        <p class="text-sm text-cocoa/80 line-clamp-3 font-sans mt-2">${poem.text}</p>
-                    </div>
-
-                    <div class="mt-4 pt-3 border-t border-babypink flex items-center justify-between text-xs text-cocoalight">
-                        <span class="flex items-center gap-1 text-red-400 font-bold"><i class="fas fa-heart"></i> ${poem.likes} Petals</span>
-                        <span class="text-cocoasemi font-semibold group-hover:translate-x-1 transition flex items-center gap-1">
-                            Read Rose <i class="fas fa-arrow-right"></i>
-                        </span>
+            if (roses.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-16 text-center text-cocoa/70 font-serif italic">
+                        No roses planted yet. Be the first to publish a poem!
                     </div>
                 `;
-                grid.appendChild(card);
-            });
-        }
+                return;
+            }
 
-        function filterRoses() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const filtered = poems.filter(p => 
-                p.title.toLowerCase().includes(query) || 
-                p.author.toLowerCase().includes(query) ||
-                p.text.toLowerCase().includes(query)
-            );
-            renderRosesGallery(filtered);
-        }
-
-        // POEM MODAL VIEW & AUDIO SYNTHESIZER
-        function openPoemModal(id) {
-            currentActivePoemId = id;
-            const poem = poems.find(p => p.id === id);
-            if (!poem) return;
-
-            const modalContent = document.getElementById('modal-poem-content');
-            
-            let stickersHTML = '';
-            poem.stickers.forEach(st => {
-                const rot = st.rotation ? `transform: rotate(${st.rotation}deg);` : '';
-                const zIndex = st.zIndex ? `z-index: ${st.zIndex};` : '';
-                const size = st.size || 36;
-                if (st.type === 'emoji') {
-                    stickersHTML += `<span class="absolute select-none" style="left:${st.left}; top:${st.top}; font-size:${size}px; ${rot} ${zIndex}">${st.content}</span>`;
-                } else {
-                    stickersHTML += `<img src="${st.content}" class="absolute object-contain select-none" style="left:${st.left}; top:${st.top}; width:${size}px; height:${size}px; ${rot} ${zIndex}">`;
-                }
-            });
-
-            modalContent.innerHTML = `
-                <div class="relative w-full min-h-[450px] p-8 rounded-2xl border-2 border-softpink flex flex-col justify-between overflow-hidden shadow-inner" style="background-color: ${poem.bgColor};">
-                    ${poem.bgImage ? `<div class="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none" style="background-image: url('${poem.bgImage}');"></div>` : ''}
+            grid.innerHTML = roses.map(rose => `
+                <div onclick="openRoseModal('${rose.id}')" class="rosetta-card p-6 rounded-3xl cursor-pointer btn-hover-lift flex flex-col justify-between h-64 border border-cocoa/20" style="background-color: ${rose.bg}">
+                    <div>
+                        <span class="text-[10px] tracking-widest text-cocoa/60 uppercase font-bold block mb-1">${rose.date}</span>
+                        <h3 class="font-serif text-xl font-bold text-cocoa line-clamp-1" style="font-family: '${rose.font}'">${escapeHtml(rose.title)}</h3>
+                        <p class="text-xs italic text-cocoa/80 mb-3 font-medium" style="font-family: '${rose.font}'">by ${escapeHtml(rose.author)}</p>
+                        <p class="text-sm text-cocoa/90 line-clamp-3 leading-relaxed" style="font-family: '${rose.font}'">${escapeHtml(rose.body)}</p>
+                    </div>
                     
-                    <div class="relative z-10 text-center mb-4">
-                        <h2 class="font-dancing text-4xl font-bold text-cocoa">${poem.title}</h2>
-                        <p class="text-xs italic text-cocoalight mt-1">by ${poem.author} • ${poem.date}</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-cocoa/15 text-xs text-cocoa/70 font-semibold">
+                        <span class="flex items-center gap-1">
+                            ${rose.music ? '🎵 Ambient Track' : '🌹 Delicate Rose'}
+                        </span>
+                        <span class="hover:underline">Read Rose &rarr;</span>
                     </div>
-
-                    <div class="relative z-10 my-4 text-center">
-                        <div class="${poem.fontClass} whitespace-pre-line leading-relaxed" style="color: ${poem.fontColor}; font-size: ${poem.fontSize}; text-align: ${poem.textAlign}">
-                            ${poem.text}
-                        </div>
-                    </div>
-
-                    <div id="modal-audio-bar" class="relative z-10 pt-3 border-t border-cocoa/10 flex items-center justify-between text-xs text-cocoalight">
-                        <span>❀ Rosetta Collection</span>
-                        ${poem.audioData ? `
-                            <button onclick="togglePoemAudio()" class="px-3 py-1 bg-softpink text-cocoa rounded-full font-bold flex items-center gap-2 hover:bg-babypink">
-                                <i id="modal-audio-icon" class="fas fa-play"></i> <span id="modal-audio-status">Play Background Music</span>
-                            </button>
-                        ` : ''}
-                    </div>
-
-                    <div class="absolute inset-0 pointer-events-none">${stickersHTML}</div>
                 </div>
-            `;
-
-            document.getElementById('modal-like-count').innerText = poem.likes;
-            renderModalComments(poem);
-
-            document.getElementById('poem-modal').classList.remove('hidden');
+            `).join('');
         }
 
-        function closePoemModal() {
-            document.getElementById('poem-modal').classList.add('hidden');
-            stopAudioSynth();
-        }
+        function openRoseModal(id) {
+            const roses = JSON.parse(localStorage.getItem('rosetta_roses') || '[]');
+            const rose = roses.find(r => r.id === id);
+            if (!rose) return;
 
-        function likeCurrentPoem() {
-            if (!currentActivePoemId) return;
-            const poem = poems.find(p => p.id === currentActivePoemId);
-            if (poem) {
-                poem.likes += 1;
-                document.getElementById('modal-like-count').innerText = poem.likes;
-                localStorage.setItem('rosetta_poems', JSON.stringify(poems));
-                renderRosesGallery();
+            const modalCanvas = document.getElementById('modal-poem-canvas');
+            modalCanvas.style.backgroundColor = rose.bg;
+
+            const title = document.getElementById('modal-rose-title');
+            title.innerText = rose.title;
+            title.style.fontFamily = rose.font;
+            title.style.color = rose.color;
+
+            const author = document.getElementById('modal-rose-author');
+            author.innerText = 'by ' + rose.author;
+            author.style.fontFamily = rose.font;
+            author.style.color = rose.color;
+
+            const body = document.getElementById('modal-rose-body');
+            body.innerText = rose.body;
+            body.style.fontFamily = rose.font;
+            body.style.color = rose.color;
+            body.style.fontSize = rose.fontSize;
+
+            document.getElementById('modal-rose-date').innerText = rose.date;
+
+            const stickerLayer = document.getElementById('modal-stickers-layer');
+            stickerLayer.innerHTML = '';
+            if (rose.stickers) {
+                rose.stickers.forEach(stk => {
+                    const img = document.createElement('img');
+                    img.src = stk.src;
+                    img.className = 'absolute pointer-events-none rounded-lg';
+                    img.style.left = stk.x + 'px';
+                    img.style.top = stk.y + 'px';
+                    img.style.width = stk.width + 'px';
+                    img.style.transform = `rotate(${stk.rotation}deg)`;
+                    stickerLayer.appendChild(img);
+                });
             }
-        }
 
-        function addPoemComment() {
-            const input = document.getElementById('modal-comment-input');
-            const text = input.value.trim();
-            if (!text || !currentActivePoemId) return;
-
-            const poem = poems.find(p => p.id === currentActivePoemId);
-            if (poem) {
-                poem.comments.push(text);
-                localStorage.setItem('rosetta_poems', JSON.stringify(poems));
-                renderModalComments(poem);
-                input.value = '';
-            }
-        }
-
-        function renderModalComments(poem) {
-            const list = document.getElementById('modal-comments-list');
-            list.innerHTML = '';
-            if (!poem.comments || poem.comments.length === 0) {
-                list.innerHTML = '<p class="text-xs text-cocoalight italic">No comments yet. Drop the first petal of appreciation!</p>';
-                return;
-            }
-            poem.comments.forEach(c => {
-                const item = document.createElement('div');
-                item.className = 'text-xs text-cocoa bg-cream p-2 rounded-lg border border-softpink/40';
-                item.innerText = '🌸 ' + c;
-                list.appendChild(item);
-            });
-        }
-
-        // SYNTHESIZED AUDIO
-        function togglePoemAudio() {
-            const poem = poems.find(p => p.id === currentActivePoemId);
-            if (!poem || !poem.audioData) return;
-
-            const status = document.getElementById('modal-audio-status');
-            const icon = document.getElementById('modal-audio-icon');
-
-            if (status.innerText.includes('Play')) {
-                if (poem.audioData === 'synth-lofi' || poem.audioData === 'synth-acoustic') {
-                    startAudioSynth(poem.audioData);
-                } else {
-                    const audio = new Audio(poem.audioData);
-                    audio.id = 'active-custom-audio';
-                    audio.play();
-                }
-                status.innerText = 'Pause Music';
-                icon.className = 'fas fa-pause';
+            const audioContainer = document.getElementById('modal-audio-container');
+            const audioPlayer = document.getElementById('modal-audio-player');
+            if (rose.music) {
+                audioPlayer.src = rose.music;
+                audioContainer.classList.remove('hidden');
             } else {
-                stopAudioSynth();
-                const customAud = document.getElementById('active-custom-audio');
-                if (customAud) { customAud.pause(); customAud.remove(); }
-                status.innerText = 'Play Background Music';
-                icon.className = 'fas fa-play';
+                audioContainer.classList.add('hidden');
+            }
+
+            document.getElementById('read-rose-modal').classList.remove('hidden');
+        }
+
+        function closeRoseModal() {
+            const audioPlayer = document.getElementById('modal-audio-player');
+            audioPlayer.pause();
+            document.getElementById('read-rose-modal').classList.add('hidden');
+        }
+
+        function openFounderModal() {
+            document.getElementById('founder-portal-modal').classList.remove('hidden');
+        }
+
+        function closeFounderModal() {
+            document.getElementById('founder-portal-modal').classList.add('hidden');
+        }
+
+        function unlockFounderPortal() {
+            const pass = document.getElementById('portal-passcode-input').value;
+            if (pass === '3011') {
+                document.getElementById('portal-lock-screen').classList.add('hidden');
+                document.getElementById('portal-admin-controls').classList.remove('hidden');
+                document.getElementById('passcode-error').classList.add('hidden');
+
+                document.getElementById('admin-bio-input').value = localStorage.getItem('rosetta_founder_bio') || document.getElementById('founder-bio-text').innerText;
+                document.getElementById('admin-preface-input').value = localStorage.getItem('rosetta_preface_text') || document.getElementById('preface-description-text').innerText;
+            } else {
+                document.getElementById('passcode-error').classList.remove('hidden');
             }
         }
 
-        function startAudioSynth(preset) {
-            stopAudioSynth();
-            audioSynthContext = new (window.AudioContext || window.webkitAudioContext)();
-            const freqs = preset === 'synth-lofi' ? [261.63, 329.63, 392.00, 493.88] : [349.23, 440.00, 523.25, 659.25];
-            
-            freqs.forEach((f) => {
-                const osc = audioSynthContext.createOscillator();
-                const gain = audioSynthContext.createGain();
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(f, audioSynthContext.currentTime);
-                gain.gain.setValueAtTime(0.03, audioSynthContext.currentTime);
-                osc.connect(gain);
-                gain.connect(audioSynthContext.destination);
-                osc.start();
-                synthOscillators.push(osc);
-            });
-        }
-
-        function stopAudioSynth() {
-            synthOscillators.forEach(o => { try { o.stop(); } catch(e){} });
-            synthOscillators = [];
-            if (audioSynthContext) {
-                audioSynthContext.close();
-                audioSynthContext = null;
-            }
-        }
-
-        // CREATOR UPDATES TIMELINE
-        function renderUpdatesTimeline() {
-            const container = document.getElementById('updates-timeline');
-            container.innerHTML = '';
-
-            creatorUpdates.forEach(up => {
-                const card = document.createElement('div');
-                card.className = 'bg-softbeige/50 p-4 rounded-2xl border border-babypink space-y-2';
-                card.innerHTML = `
-                    <div class="flex items-center justify-between text-xs text-cocoalight font-bold">
-                        <span>❀ Creator Note</span>
-                        <span>${up.date}</span>
-                    </div>
-                    <p class="text-sm text-cocoa leading-relaxed">${up.text}</p>
-                    ${up.image ? `<img src="${up.image}" class="w-full max-h-60 object-cover rounded-xl mt-2 border border-softpink">` : ''}
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function handleAdminMediaUpload(e) {
+        function uploadSiteLogo(e) {
             const file = e.target.files[0];
-            if (file) {
-                document.getElementById('admin-media-preview-name').innerText = file.name;
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    tempAdminMediaUrl = evt.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                localStorage.setItem('rosetta_site_logo', evt.target.result);
+                document.getElementById('site-logo-img').src = evt.target.result;
+            };
+            reader.readAsDataURL(file);
         }
 
-        function publishCreatorUpdate() {
+        function uploadFounderPFP(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                localStorage.setItem('rosetta_founder_pfp', evt.target.result);
+                document.getElementById('founder-pfp-img').src = evt.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function saveFounderBio() {
+            const bio = document.getElementById('admin-bio-input').value;
+            localStorage.setItem('rosetta_founder_bio', bio);
+            document.getElementById('founder-bio-text').innerText = bio;
+            alert("Founder bio updated successfully!");
+        }
+
+        function savePrefaceText() {
+            const preface = document.getElementById('admin-preface-input').value;
+            localStorage.setItem('rosetta_preface_text', preface);
+            document.getElementById('preface-description-text').innerText = preface;
+            alert("Preface description updated successfully!");
+        }
+
+        function postFounderUpdate() {
             const text = document.getElementById('admin-update-text').value.trim();
-            if (!text) {
-                alert('Please write an update note!');
+            const fileInput = document.getElementById('update-photo-input');
+            const file = fileInput.files[0];
+
+            if (!text && !file) {
+                alert("Please add text or photo media for the update!");
                 return;
             }
 
-            const newUpdate = {
-                id: 'u_' + Date.now(),
-                date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-                text: text,
-                image: tempAdminMediaUrl
+            const createUpdate = (photoSrc = null) => {
+                const update = {
+                    id: 'update_' + Date.now(),
+                    text: text,
+                    photo: photoSrc,
+                    date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                };
+
+                const updates = JSON.parse(localStorage.getItem('rosetta_updates') || '[]');
+                updates.unshift(update);
+                localStorage.setItem('rosetta_updates', JSON.stringify(updates));
+
+                document.getElementById('admin-update-text').value = '';
+                fileInput.value = '';
+                loadFounderUpdates();
+                alert("Founder note posted successfully!");
             };
 
-            creatorUpdates.unshift(newUpdate);
-            localStorage.setItem('rosetta_updates', JSON.stringify(creatorUpdates));
-
-            document.getElementById('admin-update-text').value = '';
-            tempAdminMediaUrl = '';
-            document.getElementById('admin-media-preview-name').innerText = '';
-
-            renderUpdatesTimeline();
-        }
-
-        // LOGO MANAGEMENT
-        function openLogoModal() {
-            document.getElementById('logo-modal').classList.remove('hidden');
-        }
-
-        function closeLogoModal() {
-            document.getElementById('logo-modal').classList.add('hidden');
-        }
-
-        function saveNewLogo() {
-            const fileInput = document.getElementById('logo-file-input');
-            if (fileInput.files && fileInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const src = e.target.result;
-                    document.getElementById('app-logo').src = src;
-                    localStorage.setItem('rosetta_custom_logo', src);
-                    closeLogoModal();
-                };
-                reader.readAsDataURL(fileInput.files[0]);
-            }
-        }
-
-        function loadCustomLogo() {
-            const savedLogo = localStorage.getItem('rosetta_custom_logo');
-            if (savedLogo) {
-                document.getElementById('app-logo').src = savedLogo;
-            }
-        }
-
-        // PFP MANAGEMENT
-        const DEFAULT_CREATOR_AVATAR = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23FFB6C1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='40'>🌸</text></svg>";
-
-        function handlePfpUpload(e) {
-            const file = e.target.files[0];
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function(evt) {
-                    const src = evt.target.result;
-                    document.getElementById('creator-avatar').src = src;
-                    localStorage.setItem('rosetta_custom_pfp', src);
+                reader.onload = function(e) {
+                    createUpdate(e.target.result);
                 };
                 reader.readAsDataURL(file);
+            } else {
+                createUpdate();
             }
         }
 
-        function loadCustomPfp() {
-            const savedPfp = localStorage.getItem('rosetta_custom_pfp');
-            if (savedPfp) {
-                document.getElementById('creator-avatar').src = savedPfp;
+        function loadFounderUpdates() {
+            const feed = document.getElementById('founder-updates-feed');
+            const updates = JSON.parse(localStorage.getItem('rosetta_updates') || '[]');
+
+            if (updates.length === 0) {
+                feed.innerHTML = `
+                    <div class="p-6 rounded-2xl bg-white/60 text-center text-xs text-cocoa/70 italic border border-cocoa/15">
+                        No founder notes posted yet.
+                    </div>
+                `;
+                return;
             }
+
+            feed.innerHTML = updates.map(up => `
+                <div class="p-5 rounded-2xl bg-white/80 border border-cocoa/20 space-y-3 shadow-sm">
+                    <span class="text-[10px] tracking-widest uppercase font-bold text-cocoa/60">${up.date}</span>
+                    ${up.text ? `<p class="text-sm text-cocoa leading-relaxed font-medium">${escapeHtml(up.text)}</p>` : ''}
+                    ${up.photo ? `<img src="${up.photo}" alt="Update Photo" class="max-h-80 w-full object-cover rounded-xl border border-cocoa/20">` : ''}
+                </div>
+            `).join('');
         }
 
-        function resetPfpToDefault() {
-            document.getElementById('creator-avatar').src = DEFAULT_CREATOR_AVATAR;
-            localStorage.removeItem('rosetta_custom_pfp');
+        function loadStoredSiteData() {
+            const logo = localStorage.getItem('rosetta_site_logo');
+            if (logo) document.getElementById('site-logo-img').src = logo;
+
+            const pfp = localStorage.getItem('rosetta_founder_pfp');
+            if (pfp) document.getElementById('founder-pfp-img').src = pfp;
+
+            const bio = localStorage.getItem('rosetta_founder_bio');
+            if (bio) document.getElementById('founder-bio-text').innerText = bio;
+
+            const preface = localStorage.getItem('rosetta_preface_text');
+            if (preface) document.getElementById('preface-description-text').innerText = preface;
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
         }
     </script>
 </body>
